@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="navbarfooter.css">
+    <link rel="stylesheet" href="explore.css">
+    <script src="https://kit.fontawesome.com/c784f54370.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="assets/Logo HCI.png">
+                <p>confab</p>
+        </div>
+        <div class="search-bar-container">
+            <div class="search-bar">
+                <img src="assets/searchBtn.png">
+                <input type="text" placeholder="Search">
+            </div>
+            <div class="voice-btn">
+                <i class="fa-solid fa-microphone"></i>
+            </div>
+        </div>
+        <div class="nav-menus">
+            <img class="icon notification-btn" src="assets/notification.png"></img>
+            <img class="icon language-btn" src="assets/language.png"></img>
+            <div class="icon nav-user">
+                <img src="assets/users(2).png">
+                <p>User404</p>
+            </div>
+        </div>
+    </div>
+    <div class="user-menu-container">
+        <ul class="user-menu">
+            <li class="profile">
+                <a href="">
+                    <img src="assets/profile.png">
+                    <p>Profile</p>
+                </a>
+            </li>
+            <li class="message">
+                <a href="">
+                    <img src="assets/messages.png">
+                    <p>Message</p>
+                </a>
+            </li>
+            <li class="bookmarks">
+                <a href="">
+                    <img src="assets/bookmark.png">
+                    <p>Bookmark</p>
+                </a>
+            </li>
+            <li class="about">
+                <a href="">
+                    <img src="assets/about.png">
+                    <p>About</p>
+                </a>
+            </li>
+            <li class="settings">
+                <a href="">
+                    <img src="assets/settings.png">
+                    <p>Settings</p>
+                </a>
+            </li>
+            <li class="help">
+                <a href="">
+                    <img src="assets/help.png">
+                    <p>Help</p>
+                </a>
+            </li>
+            <li class="terms">
+                <a href="">
+                    <img src="assets/terms.png">
+                    <p>Terms & Policies</p>
+                </a>
+            </li>
+            <li class="logout">
+                <a href="">
+                    <img src="assets/logout.png">
+                    <p>Log Out</p>
+                </a>
+            </li>
+            <li class="confab-rights">
+                <p>Confab, Inc. All Rights Reserved</p>
+            </li>
+        </ul>
+        <div class="triangle-container">
+            
+        </div>
+    </div>
+    <div class="language-menu-container">
+        <div class="language-menu">
+            <p class="title">Languages</p>
+            <ul class="language-list">
+                <li class="language">
+                    <div class="language-icon EN">
+                        <p>EN</p>
+                    </div>
+                    <p>English</p>
+                </li>
+                <li class="language">
+                    <div class="language-icon ID">
+                        <p>ID</p>
+                    </div>
+                    <p>Indonesia</p>
+                </li>
+            </ul>
+            <div class="language-item">
+                <p>Add Language</p>
+                <p>See All Language</p>
+            </div>
+        </div>
+        <div class="triangle-container">
+            
+        </div>
+    </div>
+    <div class="notification-menu-container">
+        <div class="notification-menu">
+            <div class="notification-title">
+                <p>Notifications</p>
+                <img src="assets/settings.png">
+            </div>
+            <div class="no-notification">
+                <img src="assets/nonotification.png">
+                <p>There is No Notification Yet</p>
+            </div>
+            <!-- <ul class="notifications-list">
+                <li class="notification">
+                    <img src="assets/users(3).png">
+                    <p class="title">New Post from Steve Alex</p>
+                    <p>20 days ago</p>
+                </li>
+            </ul> -->
+        </div>
+        <div class="triangle-container">
+            
+        </div>
+    </div>
+    <div class="contents">
+        <div class="left-side-bar">
+            <ul class="side-menus">
+                <li>
+                    <a href="homepage.html" class="menu-btn">
+                        <img src="assets/homeBtn.png">
+                        <p>Home</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="explore.html" class="menu-btn">
+                        <img src="assets/exploreBtn.png">
+                        <p>Explore</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="trending.html" class="menu-btn">
+                        <img src="assets/trendingBtn.png">
+                        <p>Trending</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="community.html" class="menu-btn">
+                        <img src="assets/communityBtn.png">
+                        <p>Community</p>
+                    </a>
+                </li>
+            </ul>
+            <div class="create-thread-btn thread-btn">
+                <h2>Create Thread</h2>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="post unfollow">
+                <div class="more-box">
+                    <ul class="more-list">
+                        <li class="more-item unfollow">
+                            <img src="assets/unfollow.png">
+                            <p>Unfollow</p>
+                        </li>
+                        <li class="more-item show-more">
+                            <img src="assets/showMore.png">
+                            <p>Show more like this</p>
+                        </li>
+                        <li class="more-item notInterested">
+                            <img src="assets/notInterested.png">
+                            <p>Not interested in this</p>
+                        </li>
+                        <li class="more-item bookmark">
+                            <img src="assets/bookmark(2).png">
+                            <p>Bookmark</p>
+                        </li>
+                        <li class="more-item report">
+                            <img src="assets/report.png">
+                            <p>Report</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="user-post-profile">
+                    <a href="" class="profile-link user-profile-img">
+                        <img src="assets/gamernewgames.png">
+                    </a>
+                    <div href="" class="profile-link post-profile">
+                        <a href="" class="username">Gamer New Games · <span class="follow-btn">Follow</span></a>
+                        <p class="post-time">Posted by Casey · 5h</p>
+                    </div>
+                    <i class="fa-solid fa-ellipsis"></i>
+                </div>
+                <a href="" class="post-content">
+                    <p>Your final Metascore prediction for Hogwarts Legacy ?</p>
+                    <img class="post-img" src="assets/postImageExplore(1).png">
+                </a>
+                <ul class="feedback-bar">
+                    <li class="icon upvote">
+                        <img src="assets/upVote.png" class="up-vote-btn">
+                        <p>1.3k</p>
+                    </li>
+                    <li class="icon downvote">
+                        <img src="assets/downVote.png" class="down-vote-btn">
+                        <p>10</p>
+                    </li>
+                    <li class="icon comment">
+                        <a class="comment-btn">
+                            <img src="assets/comment.png">
+                        </a>
+                        <p>500</p>
+                    </li>
+                    <li class="icon">
+                        <img src="assets/view.png" class="view-btn">
+                        <p>2.3k</p>
+                    </li>
+                    <li class="icon">
+                        <img src="assets/share.png" class="btn">
+                        <p>100</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="post unfollow">
+                <div class="more-box">
+                    <ul class="more-list">
+                        <li class="more-item unfollow">
+                            <img src="assets/unfollow.png">
+                            <p>Unfollow</p>
+                        </li>
+                        <li class="more-item show-more">
+                            <img src="assets/showMore.png">
+                            <p>Show more like this</p>
+                        </li>
+                        <li class="more-item notInterested">
+                            <img src="assets/notInterested.png">
+                            <p>Not interested in this</p>
+                        </li>
+                        <li class="more-item bookmark">
+                            <img src="assets/bookmark(2).png">
+                            <p>Bookmark</p>
+                        </li>
+                        <li class="more-item report">
+                            <img src="assets/report.png">
+                            <p>Report</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="user-post-profile">
+                    <a href="" class="profile-link user-profile-img">
+                        <img src="assets/filmmakers.png">
+                    </a>
+                    <div href="" class="profile-link post-profile">
+                        <a href="" class="username">Filmmakers · <span class="follow-btn">Follow</span></a>
+                        <p class="post-time">Posted by Casey · 5h</p>
+                    </div>
+                    <i class="fa-solid fa-ellipsis"></i>
+                </div>
+                <a href="" class="post-content">
+                    <p>Does anyone know what sort of light bank was used for certain night scenes in Django Unchained? Or in other night scenes? I was told massive boxes like the one pictured were used. I’d like to know the company who makes them and/or where I could find more pictures of them.</p>
+                    <img class="post-img" src="assets/postImageExplore(2).png">
+                </a>
+                <ul class="feedback-bar">
+                    <li class="icon upvote">
+                        <img src="assets/upVote.png" class="up-vote-btn">
+                        <p>1.3k</p>
+                    </li>
+                    <li class="icon downvote">
+                        <img src="assets/downVote.png" class="down-vote-btn">
+                        <p>10</p>
+                    </li>
+                    <li class="icon comment">
+                        <a class="comment-btn">
+                            <img src="assets/comment.png">
+                        </a>
+                        <p>500</p>
+                    </li>
+                    <li class="icon">
+                        <img src="assets/view.png" class="view-btn">
+                        <p>2.3k</p>
+                    </li>
+                    <li class="icon">
+                        <img src="assets/share.png" class="btn">
+                        <p>100</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="post unfollow">
+                <div class="more-box">
+                    <ul class="more-list">
+                        <li class="more-item unfollow">
+                            <img src="assets/unfollow.png">
+                            <p>Unfollow</p>
+                        </li>
+                        <li class="more-item show-more">
+                            <img src="assets/showMore.png">
+                            <p>Show more like this</p>
+                        </li>
+                        <li class="more-item notInterested">
+                            <img src="assets/notInterested.png">
+                            <p>Not interested in this</p>
+                        </li>
+                        <li class="more-item bookmark">
+                            <img src="assets/bookmark(2).png">
+                            <p>Bookmark</p>
+                        </li>
+                        <li class="more-item report">
+                            <img src="assets/report.png">
+                            <p>Report</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="user-post-profile">
+                    <a href="" class="profile-link user-profile-img">
+                        <img src="assets/oldtv.png">
+                    </a>
+                    <div href="" class="profile-link post-profile">
+                        <a href="" class="username">Old TV · <span class="follow-btn">Follow</span></a>
+                        <p class="post-time">Posted by last_grabow · Feb 1</p>
+                    </div>
+                    <i class="fa-solid fa-ellipsis"></i>
+                </div>
+                <a href="" class="post-content">
+                    <p>Saw these two in a commercial last night and made me sad seeing them aged.</p>
+                    <img class="post-img" src="assets/postImageExplore(3).png">
+                </a>
+                <ul class="feedback-bar">
+                    <li class="icon upvote">
+                        <img src="assets/upVote.png" class="up-vote-btn">
+                        <p>1.3k</p>
+                    </li>
+                    <li class="icon downvote">
+                        <img src="assets/downVote.png" class="down-vote-btn">
+                        <p>10</p>
+                    </li>
+                    <li class="icon comment">
+                        <a class="comment-btn">
+                            <img src="assets/comment.png">
+                        </a>
+                        <p>500</p>
+                    </li>
+                    <li class="icon">
+                        <img src="assets/view.png" class="view-btn">
+                        <p>2.3k</p>
+                    </li>
+                    <li class="icon">
+                        <img src="assets/share.png" class="btn">
+                        <p>100</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="post unfollow">
+                <div class="more-box">
+                    <ul class="more-list">
+                        <li class="more-item unfollow">
+                            <img src="assets/unfollow.png">
+                            <p>Unfollow</p>
+                        </li>
+                        <li class="more-item show-more">
+                            <img src="assets/showMore.png">
+                            <p>Show more like this</p>
+                        </li>
+                        <li class="more-item notInterested">
+                            <img src="assets/notInterested.png">
+                            <p>Not interested in this</p>
+                        </li>
+                        <li class="more-item bookmark">
+                            <img src="assets/bookmark(2).png">
+                            <p>Bookmark</p>
+                        </li>
+                        <li class="more-item report">
+                            <img src="assets/report.png">
+                            <p>Report</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="user-post-profile">
+                    <a href="" class="profile-link user-profile-img">
+                        <img src="assets/wholesome.png">
+                    </a>
+                    <div href="" class="profile-link post-profile">
+                        <a href="" class="username">Wholesome · <span class="follow-btn">Follow</span></a>
+                        <p class="post-time">Posted by Onepen99 · Dec 18, 2022</p>
+                    </div>
+                    <i class="fa-solid fa-ellipsis"></i>
+                </div>
+                <a href="" class="post-content">
+                    <p>The world needs to know about and celebrate such people</p>
+                    <img class="post-img" src="assets/postImageExplore(4).png">
+                </a>
+                <ul class="feedback-bar">
+                    <li class="icon upvote">
+                        <img src="assets/upVote.png" class="up-vote-btn">
+                        <p>1.3k</p>
+                    </li>
+                    <li class="icon downvote">
+                        <img src="assets/downVote.png" class="down-vote-btn">
+                        <p>10</p>
+                    </li>
+                    <li class="icon comment">
+                        <a class="comment-btn">
+                            <img src="assets/comment.png">
+                        </a>
+                        <p>500</p>
+                    </li>
+                    <li class="icon">
+                        <img src="assets/view.png" class="view-btn">
+                        <p>2.3k</p>
+                    </li>
+                    <li class="icon">
+                        <img src="assets/share.png" class="btn">
+                        <p>100</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="right-side-bar">
+            <div class="top-threads-container">
+                <div class="top-threads">
+                    <h2>Top Threads</h2>
+                    <ul class="top-threads-list">
+                        <li>
+                            <a href="" class="top-thread-item"> 
+                                <img src="assets/topThread(1).png">
+                                <div class="top-thread-text">
+                                    <p class="top-thread-title">Help me caption this photo of our family cat.</p>
+                                    <p class="top-thread-info">20k views · 1k comments · 15d</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="top-thread-item">
+                                <img src="assets/topThread(2).png">
+                                <div class="top-thread-text">
+                                    <p class="top-thread-title">Why was Stephen Hawking so smart?</p>
+                                    <p class="top-thread-info">20k views · 1k comments · 15d</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="top-thread-item">
+                                <img src="assets/topThread(3).png">
+                                <div class="top-thread-text">
+                                    <p class="top-thread-title">Can you learn Japanese culture from anime?</p>
+                                    <p class="top-thread-info">20k views · 1k comments · 15d</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="top-community-container">
+                <div class="top-community">
+                    <h2>Top Community</h2>
+                    <ul class="top-community-list">
+                        <li>
+                            <a href="" class="top-community-item">
+                                <img src="assets/topCommunity(1).png">
+                                <p>League of Legends</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="top-community-item">
+                                <img src="assets/topCommunity(2).png">
+                                <p>Pewdiepie Fans</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="top-community-item">
+                                <img src="assets/topCommunity(3).png">
+                                <p>My List of Anime</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="message-btn-container">
+                <div class="message-btn">
+                    <img src="assets/messageBtn.png">
+                    <p>Message</p>
+                    <img class="arrow" src="assets/arrowUp.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="messages-container">
+        <div class="messages">
+            <div class="messages-header">
+                <img src="assets/messageBtn.png">
+                <p>Message</p>
+                <div class="messages-header-btn">
+                    <a>
+                        <img src="assets/fullscreen.png">
+                    </a>
+                    <img src="assets/arrowDown.png">
+                </div>
+            </div>
+            <ul class="messages-list">
+                <li>
+                    <a href="" class="message">
+                        <div class="message-profile">
+                            <img src="assets/users(4).png">
+                        </div>
+                        <div class="message-content">
+                            <div class="message-info">
+                                <p class="message-name">Sean Hood</p>
+                                <p class="message-time">Jan 7</p>
+                            </div>
+                            <p>Stay happy, stay peaceful, stay the way you are and stay healthy brother. Hope we will meet...</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="message">
+                        <div class="message-profile">
+                            <img src="assets/users(4).png">
+                        </div>
+                        <div class="message-content">
+                            <div class="message-info">
+                                <p class="message-name">Sean Hood</p>
+                                <p class="message-time">Jan 7</p>
+                            </div>
+                            <p>Stay happy, stay peaceful, stay the way you are and stay healthy brother. Hope we will meet...</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="message">
+                        <div class="message-profile">
+                            <img src="assets/users(4).png">
+                        </div>
+                        <div class="message-content">
+                            <div class="message-info">
+                                <p class="message-name">Sean Hood</p>
+                                <p class="message-time">Jan 7</p>
+                            </div>
+                            <p>Stay happy, stay peaceful, stay the way you are and stay healthy brother. Hope we will meet...</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="message">
+                        <div class="message-profile">
+                            <img src="assets/users(4).png">
+                        </div>
+                        <div class="message-content">
+                            <div class="message-info">
+                                <p class="message-name">Sean Hood</p>
+                                <p class="message-time">Jan 7</p>
+                            </div>
+                            <p>Stay happy, stay peaceful, stay the way you are and stay healthy brother. Hope we will meet...</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="message">
+                        <div class="message-profile">
+                            <img src="assets/users(4).png">
+                        </div>
+                        <div class="message-content">
+                            <div class="message-info">
+                                <p class="message-name">Sean Hood</p>
+                                <p class="message-time">Jan 7</p>
+                            </div>
+                            <p>Stay happy, stay peaceful, stay the way you are and stay healthy brother. Hope we will meet...</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="bookmark-notification-container">
+        <div class="bookmark-notification">
+            <img src="assets/bookmarkWhite.png" class="notification-active">
+            <p class="notification-message notification-active">Thread Bookmarked</p>
+            <p class="undo-btn">Undo</p>
+        </div>
+    </div>
+    <div class="thread-box-container">
+        <div class="choose-post-container">
+            <div class="choose-post">
+                <div class="search-bar">
+                    <img src="assets/searchBtn.png">
+                    <input type="text" placeholder="Search">
+                </div>
+                <div class="everyone-post">
+                    <img src="assets/everyone.png">
+                    <p>Everyone</p>
+                </div>
+                <ul class="other-community-post">
+                    <li class="community">
+                        <img src="assets/technology.png">
+                        <p>Technology</p>
+                    </li>
+                    <li class="community">
+                        <img src="assets/news.png">
+                        <p>News</p>
+                    </li>
+                    <li class="community">
+                        <img src="assets/pubg.png">
+                        <p>PUBG</p>
+                    </li>
+                    <li class="community">
+                        <img src="assets/harrypotter.png">
+                        <p>Harry Potter</p>
+                    </li>
+                    <li class="community">
+                        <img src="assets/chemistry.png">
+                        <p>Chemistry</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="triangle-container">
+    
+            </div>
+        </div>
+        <div class="thread-box">
+            <div class="thread-box-header">
+                <img src="assets/notInterested.png" class="close-thread-box">
+                <div class="choose-post-btn">
+                    <img src="assets/everyone.png">
+                    <p>Everyone</p>
+                    <img src="assets/arrowDown.png">
+                </div>
+            </div>
+            <div class="thread-box-typing">
+                <div class="thread-title">
+                    <input type="text" placeholder="Title">
+                </div>
+                <div class="thread-content">
+                    <textarea placeholder="Write Something..." rows="15"></textarea>
+                </div>
+            </div>
+            <div class="thread-footer">
+                <ul class="thread-format">
+                    <li class="thread-item font-format"><img src="assets/fontFormat.png"></li>
+                    <li class="thread-item add-image"><img src="assets/addImage.png"></li>
+                    <li class="thread-item add-video"><img src="assets/addVideo.png"></li>
+                </ul>
+                <p class="post-btn">Post</p>
+            </div>
+            <ul class="font-format-list">
+                <li class="font-format-item arrow"><img src="assets/arrowDown(2).png"></li>
+                <li class="font-format-item"><img src="assets/format (1).png"></li>
+                <li class="font-format-item"><img src="assets/format (2).png"></li>
+                <li class="font-format-item"><img src="assets/format (3).png"></li>
+                <li class="font-format-item"><img src="assets/format (4).png"></li>
+                <li class="font-format-item"><img src="assets/format (5).png"></li>
+                <li class="font-format-item"><img src="assets/format (6).png"></li>
+                <li class="font-format-item"><img src="assets/format (7).png"></li>
+                <li class="font-format-item"><img src="assets/format (8).png"></li>
+                <li class="font-format-item"><img src="assets/format (9).png"></li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+<script src="explore.js"></script>
+<script src="navbarfooter.js"></script>
+</html>

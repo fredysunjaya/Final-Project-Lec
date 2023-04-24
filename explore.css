@@ -1,0 +1,904 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+:root {
+    --line-color: rgba(217, 217, 217, 1);
+    --grey-text: rgba(107, 107, 107, 1);
+    --blue: rgba(0, 121, 211, 1);
+    --blue-hover: rgba(26, 90, 255, 1);
+    --grey-hover: rgba(222, 222, 222, 1);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+
+/* Contents */
+/* ============================================================================================================== */
+body.active {
+    overflow: hidden;
+}
+
+.contents.active {
+    pointer-events: none;
+}
+
+/* Left Side Bar */
+/* ============================================================================================================== */
+.left-side-bar {
+    border-right: 2px solid var(--line-color);
+    padding: 6% 1.5% 0% 8%;
+    width: 25%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+}
+
+/* Left Side Menu */
+/* ============================================================================================================== */
+.side-menus {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    font-family: Verdana, sans-serif;
+    list-style: none;
+}
+
+.menu-btn {
+    display: flex;
+    gap: 15%;
+    align-items: center;
+    /* height: 9%; */
+    width: 100%;
+    padding: 5% 5%;
+}
+
+.menu-btn:hover {
+    background-color: var(--grey-hover);
+    border-radius: 50px;
+    transition: all 0.25s;
+}
+
+.menu-btn img {
+    /* height: 100%; */
+    width: 15%;
+}
+
+.menu-btn p {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* Create Thread Button */
+/* ============================================================================================================== */
+.create-thread-btn {
+    width: 85%;
+    background-color: var(--blue);
+    color: white;
+    padding: 5% 5%;
+    border-radius: 100px;
+    font-family: Ubuntu, sans sans-serif;
+    text-align: center;
+}
+
+.create-thread-btn:hover {
+    background-color: var(--blue-hover);
+    transition: all 0.25s;
+}
+
+/* Main Content */
+/* ============================================================================================================== */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 5%;
+    width: 45%;
+    margin-left: 25%;
+    /* gap: 1.5%; */
+    height: fit-content;
+}
+
+/* Create Thread Home */
+/* ============================================================================================================== */
+.user-txt {
+    display: flex;
+    gap: 3%;
+    align-items: center;
+    /* height: 2%; */
+    width: 100%;
+    padding-left: 2%;
+}
+
+.user-txt img {
+    /* height: 100%; */
+    width: 6%;
+}
+
+.create-thread-txt {
+    width: 80%;
+    background-color: rgba(249, 249, 249, 1);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: var(--grey-text);
+    border-radius: 30px;
+    padding: 1.5% 3%;
+    font-family: Ubuntu, sans-serif;
+}
+
+
+/* Post */
+/* ============================================================================================================== */
+.post {
+    display: flex;
+    border-top: 2px solid var(--line-color);
+    margin-top: 3%;
+    padding-top: 1.5%;
+    padding-left: 2%;
+    flex-direction: column;
+    font-family: Ubuntu, sans-serif;
+    width: 100%;
+    position: relative;
+}
+
+
+/* More Box */
+/* ============================================================================================================== */
+.more-box {
+    width: 24%;
+    height: 200px;
+    padding: 2% 2%;
+    position: absolute;
+    font-family: Ubuntu, sans-serif;
+    right: 9.8%;
+    top: 5%;
+    background-color: white;
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    font-size: 0.8em;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.25s;
+    z-index: 997;
+}
+
+.more-box.show {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.25s;
+}
+
+.more-list {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    justify-content: space-between;
+}
+
+.more-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 15%;
+}
+
+.more-item img {
+    width: 10%;
+    object-fit: contain;
+}
+
+.more-item.bookmark {
+    cursor: pointer;
+}
+
+
+/* Post Profile */
+/* ============================================================================================================== */
+.user-post-profile {
+    display: flex;
+    width: 90%;
+    align-items: center;
+    height: 3%;
+    gap: 2%;
+}
+
+.user-profile-img {
+    width: 6.5%;
+}
+
+.user-profile-img img {
+    /* height: 100%; */
+    width: 100%;
+    border-radius: 35px;
+}
+
+.post-profile {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.post-profile .username {
+    font-weight: bold;
+}
+
+.post-profile .post-time {
+    color: var(--grey-text);
+}
+
+.user-post-profile .fa-ellipsis {
+    margin: 0 auto;
+    margin-right: -0.5%;
+    font-size: 1.2em;
+    padding: 1% 1%;
+}
+
+.user-post-profile .fa-ellipsis:hover {
+    background-color: var(--grey-hover);
+    border-radius: 50px;
+    transition: all 0.25s;
+}
+
+.follow-btn {
+    color: var(--blue);
+}
+
+
+/* Post Content */
+/* ============================================================================================================== */
+.post-content {
+    width: 90%;
+}
+
+.post-content p {
+    display: block;
+    padding: 1% 0%;
+    font-size: 1.5em;
+}
+
+.post-img {
+    width: 100%;
+}
+
+/* Feedback bar */
+/* ============================================================================================================== */
+.feedback-bar {
+    display: flex;
+    width: 50%;
+    /* height: 2.5%; */
+    align-items: center;
+    padding-top: 1%;
+    justify-content: space-between;
+    /* gap: 2%; */
+}
+
+.feedback-bar .icon {
+    display: flex;
+    align-items: center;
+    gap: 15%;
+}
+
+
+.feedback-bar .icon img {
+    /* height: 100%; */
+    width: 25%;
+}
+
+.comment-btn {
+    width: 25%;
+}
+
+.comment .comment-btn img {
+    width: 100%;
+}
+
+.post.bottom {
+    margin-bottom: 20%;
+}
+
+/* Right Side Bar */
+/* ============================================================================================================== */
+.right-side-bar {
+    width: 30%;
+    height: 100vh;
+    position: fixed;
+    border-left: 2px solid var(--line-color);
+    top: 0%;
+    right: 0%;
+}
+
+
+/* Top Thread */
+/* ============================================================================================================== */
+.top-threads-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 45%;
+    font-family: Ubuntu, sans-serif;
+    position: relative;
+    color: black;
+}
+
+.top-threads {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0% 6%;
+    padding-top: 15.6%; 
+}
+
+.top-threads h2 {
+    border-bottom: 2px solid var(--line-color);
+    padding-bottom: 1%;
+}
+
+.top-threads-list {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    list-style: none;
+    padding-top: 3%;
+    gap: 5%;
+}
+
+.top-thread-item img {
+    width: 19%;
+}
+
+.top-thread-item {
+    display: flex;
+    gap: 3%;
+}
+
+.top-thread-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.top-thread-title {
+    font-size: 1.2em;
+}
+
+
+/* Top Community */
+/* ============================================================================================================== */
+.top-community-container {
+    width: 100%;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    font-family: Ubuntu, sans-serif;
+    color: black;
+    position: relative;
+}
+
+.top-community {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0% 6%; 
+}
+
+.top-community h2 {
+    border-bottom: 2px solid var(--line-color);
+    padding-bottom: 1%;
+}
+
+.top-community-list {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    list-style: none;
+    padding-top: 3%;
+    gap: 5%;
+}
+
+.top-community-item {
+    display: flex;
+    gap: 5%;
+    align-items: center;
+    width: fit-content;
+}
+
+.top-community-item img {
+    width: 7%;
+}
+
+
+/* Message Button */
+/* ============================================================================================================== */
+/* .message-btn-container {
+    
+} */
+
+.message-btn {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    gap: 15%;
+    bottom: 0%;
+    width: 35%;
+    left: 55%;
+    z-index: 997;
+    padding: 2% 5%;
+    border-radius: 10px 10px 0 0;
+}
+
+.message-btn:hover {
+    box-shadow: inset 0px -3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.message-btn-container img {
+    width: 20%;
+}
+
+.message-btn-container .arrow {
+    width: 10%;
+}
+
+
+/* Messages */
+/* ============================================================================================================== */
+.messages-container {
+    width: 25%;
+    height: 50%;
+    position: fixed;
+    bottom: -150%;
+    right: 2%;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
+    background-color: white;
+    font-family: Ubuntu, sans-serif;
+    transition: all 0.3s;
+}
+
+.messages-container.show {
+    bottom: 0;
+    transition: all 0.3s;
+}
+
+.messages {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.messages-header {
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 4% 6%;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--line-color);
+}
+
+.messages-header:hover {
+    box-shadow: inset 0px 7px 11px rgba(0, 0, 0, 0.15);
+
+}
+
+.messages-header img {
+    width: 5%;
+}
+
+.messages-header-btn {
+    display: flex;
+    width: 12%;
+    justify-content: space-between;
+}
+
+.messages-header-btn img {
+    width: 35%;
+    object-fit: contain;
+}
+
+.messages-list {
+    display: flex;
+    width: 100%;
+    height: 80%;
+    overflow-y: scroll;
+    flex-direction: column;
+    padding: 1% 6%;
+    list-style: none;
+    margin-top: 1%;
+    
+}
+
+.messages-list::-webkit-scrollbar {
+    display: none;
+}
+
+.messages-list .message {
+    display: flex;
+    width: 100%;
+    gap: 2%;
+    padding: 2% 0%;
+    border-bottom: 2px solid var(--line-color);
+}
+
+.message-profile {
+    width: 14%;
+}
+
+.message-profile img {
+    border-radius: 50px;
+    width: 100%;
+}
+
+.message-content {
+    width: 88%;
+    display: flex;
+    flex-direction: column;
+}
+
+.message-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.message-name {
+    font-size: 1.2em;
+}
+
+.message-time {
+    color: var(--grey-text);
+}
+
+
+/* Bookmark Notification */
+/* ============================================================================================================== */
+.bookmark-notification-container {
+    width: 25%;
+    height: 5%;
+    position: fixed;
+    bottom: -150%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    background-color: rgba(75, 181, 67, 1);
+    font-family: Ubuntu, sans-serif;
+    transition: all 0.5s;
+    padding: 1% 0.5%;
+    color: white;
+}
+
+.bookmark-notification-container.show {
+    bottom: 3%;
+    transition: all 0.5s;
+}
+
+.bookmark-notification {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bookmark-notification img {
+    width: 8%;
+    object-fit: contain;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.bookmark-notification .undo-btn {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.bookmark-notification .notification-message {
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.bookmark-notification .notification-active {
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+
+/* Thread Box */
+/* ============================================================================================================== */
+.thread-box-container {
+    position: fixed;
+    width: 65%;
+    height: 80%;
+    background-color: white;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
+    top: 52%;
+    left: 50%;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+    font-family: Ubuntu, sans-serif;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.25s;
+}
+
+.thread-box-container.show {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.25s;
+}
+
+.thread-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.thread-box-header {
+    padding: 1.5% 2%;
+    display: flex;
+    width: 100%;
+    height: 10%;
+    align-items: center;
+    border-bottom: 2px solid var(--line-color);
+    padding-bottom: 0.5%;
+    position: relative;
+}
+
+.close-thread-box {
+    width: 1.5%;
+    object-fit: contain;
+}
+
+.choose-post-btn {
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    width: 13%;
+    justify-content: space-between;
+    margin: 0 auto; 
+    transition: all 0.25s;
+    padding: 0.5% 1%;
+}   
+
+.choose-post-btn img {
+    width: 12%;
+    object-fit: contain;
+}
+
+.choose-post-btn:hover {
+    background-color: var(--grey-hover);
+    transition: all 0.25s;
+    border-radius: 30px;
+}   
+
+.thread-box-typing {
+    padding: 1.5% 2%;
+    width: 100%;
+    height: 80%;
+}
+
+.thread-title {
+    padding-top: 2%;
+    padding-bottom: 0.5%;
+    border-bottom: 2px solid var(--line-color);
+}
+
+.thread-title input[type=text] {
+    width: 100%;
+    border: none;
+    font-family: Ubuntu, sans-serif;
+    font-size: 2em;
+}
+
+input[type=text]:focus {
+    outline: none;
+}
+
+.thread-content textarea {
+    width: 100%;
+    min-height: 50%;
+    max-height: 100%;
+    resize: none;
+    border: none;
+    font-family: Ubuntu, sans-serif;
+    padding-top: 1%;
+    font-size: 1.2em;
+}
+
+.thread-content textarea:focus {
+    outline: none;
+}
+
+.thread-content textarea::-webkit-scrollbar {
+    display: none;
+}
+
+.thread-footer {
+    border-top: 2px solid var(--line-color);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 1% 3%;
+    height: 10%;
+}
+
+.thread-format {
+    display: flex;
+    list-style: none;
+    width: 10%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.thread-item {
+    width: 20%;
+}
+
+.thread-item img {
+    width: 100%;
+}
+
+.post-btn {
+    border-radius: 25px;
+    background-color: var(--blue);
+    padding: 1% 3%;
+    color: white;
+}
+
+.font-format-list {
+    display: flex;
+    position: absolute;
+    width: 35%;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 2.1%;
+    left: 1.5%;
+    background-color: white;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.25s;
+}
+
+.thread-item.font-format {
+    cursor: pointer;
+}
+
+.font-format-item.arrow {
+    cursor: pointer;
+}
+
+.font-format-list.show {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.25s;
+}
+
+.font-format-item {
+    width: 4%;
+}
+
+.font-format-item img {
+    width: 100%;
+}
+
+.font-format-item.arrow {
+    width: 8%;
+}
+
+
+/* Choose Post */
+/* ============================================================================================================== */
+.choose-post-container {
+    position: absolute;
+    width: 20%;
+    height: 40%;
+    background-color: white;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
+    top: 22%;
+    left: 70%;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+    font-family: Ubuntu, sans-serif;
+    padding: 1.5% 2%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.25s;
+    z-index: 997;
+}
+
+.choose-post-container.show {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.25s;
+}
+
+.choose-post {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.choose-post .search-bar {
+    margin: 0 auto;
+    width: 100%;
+    font-size: 0.75em;
+    padding: 1% 9%;
+    box-shadow: none;
+}   
+
+.choose-post .search-bar img {
+    width: 6%;
+}
+
+.everyone-post {
+    display: flex;
+    align-items: center;
+    width: 12%;
+    gap: 100%;
+    padding: 10% 0%;
+    padding-bottom: 5%;
+}
+
+.everyone-post img {
+    width: 100%;
+}
+
+.other-community-post {
+    border-top: 2px solid var(--line-color);
+    display: flex;
+    flex-direction: column;
+    padding-top: 7%;
+    width: 100%;
+    height: 75%;
+    overflow-y: scroll;
+    gap: 10%;
+}
+
+.other-community-post::-webkit-scrollbar {
+    display: none;
+}
+
+.other-community-post .community {
+    display: flex;
+    width: 15%;
+    gap: 60%;
+}
+
+.other-community-post .community img {
+    border-radius: 30px ;
+    width: 100%;
+    object-fit: contain;
+}
+
+.choose-post-container .triangle-container {
+    border-left: none;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    filter: drop-shadow(-20px 0px 15px rgba(0, 0, 0, 0.3));
+
+    border-right: 30px solid white;
+
+    top: 5%;
+    left: -12%;
+}
