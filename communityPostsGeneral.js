@@ -313,6 +313,9 @@ let communityAssets = [
             communityName: "Ping Pong",
             communityDesc: "The place to talk all about ping pong",
             communityRef: "communityPostsGeneral.html?0&0",
+            communityAboutRef: "communityAbout.html?0&0",
+            communityRulesRef: "communityRules.html?0&0",
+            communityModRef: "communityModerators.html?0&0",
         },
         {
             profileImg: "assets/Community/figma.png",
@@ -320,6 +323,9 @@ let communityAssets = [
             communityName: "Figma",
             communityDesc: "The place to talk about Figma, Tips, and Tricks",
             communityRef: "communityPostsGeneral.html?0&1",
+            communityAboutRef: "communityAbout.html?0&1",
+            communityRulesRef: "communityRules.html?0&1",
+            communityModRef: "communityModerators.html?0&1",
         },
     ],
     [
@@ -336,6 +342,9 @@ let communityAssets = [
             communityName: "PUBG",
             communityDesc: "The place to talk about pubg game, lore, and others",
             communityRef: "communityPostsGeneral.html?1&1",
+            communityAboutRef: "communityAbout.html?1&1",
+            communityRulesRef: "communityRules.html?1&1",
+            communityModRef: "communityModerators.html?1&1",
         },
         {
             profileImg: "assets/Community/fortnite.png",
@@ -343,6 +352,9 @@ let communityAssets = [
             communityName: "Fortnite",
             communityDesc: "The place to talk about fortnite game, lore, and others ",
             communityRef: "communityPostsGeneral.html?1&2",
+            communityAboutRef: "communityAbout.html?1&2",
+            communityRulesRef: "communityRules.html?1&2",
+            communityModRef: "communityModerators.html?1&2",
         },
         {
             profileImg: "assets/Community/naruto.png",
@@ -350,6 +362,9 @@ let communityAssets = [
             communityName: "Naruto",
             communityDesc: "The place to talk about Naruto game, lore, and others",
             communityRef: "communityPostsGeneral.html?1&3",
+            communityAboutRef: "communityAbout.html?1&3",
+            communityRulesRef: "communityRules.html?1&3",
+            communityModRef: "communityModerators.html?1&3",
         },
         {
             profileImg: "assets/Community/gamerzone.png",
@@ -357,6 +372,9 @@ let communityAssets = [
             communityName: "Gamer Zone",
             communityDesc: "The place to talk about all game, lore, and others",
             communityRef: "communityPostsGeneral.html?1&4",
+            communityAboutRef: "communityAbout.html?1&4",
+            communityRulesRef: "communityRules.html?1&4",
+            communityModRef: "communityModerators.html?1&4",
         },
         {
             profileImg: "assets/Community/mcureport.png",
@@ -364,6 +382,9 @@ let communityAssets = [
             communityName: "MCU REPORT",
             communityDesc: "The place to talk about MCU game, lore, and others.",
             communityRef: "communityPostsGeneral.html?1&5",
+            communityAboutRef: "communityAbout.html?1&5",
+            communityRulesRef: "communityRules.html?1&5",
+            communityModRef: "communityModerators.html?1&5",
         },
         {
             profileImg: "assets/Community/pics.png",
@@ -371,6 +392,9 @@ let communityAssets = [
             communityName: "Pics",
             communityDesc: "The place to talk about picture and story behind it",
             communityRef: "communityPostsGeneral.html?1&6",
+            communityAboutRef: "communityAbout.html?1&6",
+            communityRulesRef: "communityRules.html?1&6",
+            communityModRef: "communityModerators.html?1&6",
         },
         {
             profileImg: "assets/Community/wholesome.png",
@@ -378,6 +402,9 @@ let communityAssets = [
             communityName: "Wholesome",
             communityDesc: "The place to talk about wholesome moment in life",
             communityRef: "communityPostsGeneral.html?1&7",
+            communityAboutRef: "communityAbout.html?1&7",
+            communityRulesRef: "communityRules.html?1&7",
+            communityModRef: "communityModerators.html?1&7",
         },
         {
             profileImg: "assets/Community/oldtv.png",
@@ -385,6 +412,9 @@ let communityAssets = [
             communityName: "Old TV",
             communityDesc: "The place to talk about old fil, tv series, and others",
             communityRef: "communityPostsGeneral.html?1&8",
+            communityAboutRef: "communityAbout.html?1&8",
+            communityRulesRef: "communityRules.html?1&8",
+            communityModRef: "communityModerators.html?1&8",
         },
         {
             profileImg: "assets/Community/filmmakers.png",
@@ -392,6 +422,9 @@ let communityAssets = [
             communityName: "Filmmakers",
             communityDesc: "The place to talk about filming technique and concept",
             communityRef: "communityPostsGeneral.html?1&9",
+            communityAboutRef: "communityAbout.html?1&9",
+            communityRulesRef: "communityRules.html?1&9",
+            communityModRef: "communityModerators.html?1&9",
         },
         {
             profileImg: "assets/Community/mobilelegends.png",
@@ -399,6 +432,9 @@ let communityAssets = [
             communityName: "Mobile Legends",
             communityDesc: "The place to talk about Mobile Legends game, lore, and others",
             communityRef: "communityPostsGeneral.html?1&10",
+            communityAboutRef: "communityAbout.html?1&10",
+            communityRulesRef: "communityRules.html?1&10",
+            communityModRef: "communityModerators.html?1&10",
         },
         {
             profileImg: "assets/Community/programming.png",
@@ -406,6 +442,9 @@ let communityAssets = [
             communityName: "Programming",
             communityDesc: "The place to talk about programming stuff",
             communityRef: "communityPostsGeneral.html?1&11",
+            communityAboutRef: "communityAbout.html?1&11",
+            communityRulesRef: "communityRules.html?1&11",
+            communityModRef: "communityModerators.html?1&11",
         },
     ],
 ]
@@ -418,6 +457,10 @@ let bannerImg = document.querySelector(".banner-image")
 let communityName = document.querySelectorAll(".communityName")
 let communityProfilePic = document.querySelectorAll(".communityProPic")
 bannerImg.style.backgroundImage = "url(\"" + communityAssets[postIndex1][postIndex2].bannerImg + "\")"
+document.querySelector(".community-menu-item.about").href = communityAssets[postIndex1][postIndex2].communityAboutRef
+document.querySelector(".community-menu-item.posts").href = communityAssets[postIndex1][postIndex2].communityRef
+document.querySelector(".community-menu-item.rules").href = communityAssets[postIndex1][postIndex2].communityRulesRef
+document.querySelector(".community-menu-item.moderators").href = communityAssets[postIndex1][postIndex2].communityModRef
 communityName.forEach((element, index) => {
     communityName[index].innerHTML = communityAssets[postIndex1][postIndex2].communityName
     communityProfilePic[index].src = communityAssets[postIndex1][postIndex2].profileImg

@@ -248,14 +248,14 @@ body{
     overflow-y: auto;
 }
 
-.message{
+.chatBox .message {     
     position: relative;
     display: flex;
     width: 100%;
     margin: 5px 0;
 }
 
-.message p{
+.chatBox .message p{
     position: relative;
     right: 0;
     text-align: right;
@@ -266,7 +266,7 @@ body{
     font-size: 0.9em;
 }
 
-.message p::before{
+.chatBox .message p::before{
     content: '';
     position: absolute;
     top: 0;
@@ -276,7 +276,7 @@ body{
     background: linear-gradient(135deg, #ececec 0%, #ececec 50%, transparent 50%, transparent);
 }
 
-.message p span{
+.chatBox .message p span{
     display: block;
     margin-top: 5px;
     font-size: 0.85em;
@@ -287,16 +287,16 @@ body{
     justify-content: flex-end;
 }
 
-.frnd_message{
+.chatBox .frnd_message{
     justify-content: flex-start;
 }
 
-.frnd_message p{
+.chatBox .frnd_message p{
     background-color: #fff;
     text-align: left;
 }
 
-.message.frnd_message p::before{
+.chatBox .message.frnd_message p::before{
     content: '';
     position: absolute;
     top: 0;
