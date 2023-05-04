@@ -21,11 +21,16 @@
     height: 7vh;
     display: flex;
     align-items: center;
-    font-family: Ubuntu, sans serif;
+    font-family: "Ubuntu", sans-serif;
     box-shadow: 0px 10px 40px -12px rgba(0, 0, 0, 0.3);
     position: fixed;
     z-index: 999;
     background-color: rgba(255, 255, 255, 1.0);
+}
+
+.navbar a{
+    text-decoration: none;
+    color: black;
 }
 
 
@@ -33,16 +38,18 @@
 /* ============================================================================================================== */
 .logo {
     /* height: 70%; */
-    width: 18%;
+    width: 10%;
     display: flex;
     align-items: center;
-    margin-left: 10%;
-    gap: 10%;
+    margin-left: 9%;
+    margin-right: 6%;
+    /* gap: 10%; */
+    justify-content: space-between;
 }
 
 .logo img {
     /* height: 100%; */
-    width: 15%;
+    width: 30%;
     object-fit: contain;
 }
 
@@ -56,9 +63,10 @@
 /* Search Bar */
 /* ============================================================================================================== */
 .search-bar-container {
-    width: 40%;
+    width: 70%;
     display: flex;
     align-items: center;
+    justify-content: center;
     /* height: 50%; */
     gap: 3%;
 }
@@ -66,7 +74,7 @@
 .search-bar {
     background-color: rgba(249, 249, 249, 1);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    width: 90%;
+    width: 70%;
     /* height: 100%; */
     display: flex;
     align-items: center;
@@ -114,13 +122,13 @@ input[type=text]:focus {
     display: flex;
     align-items: center;
     /* height: 50%; */
-    width: 30%;
+    width: 20%;
     gap: 5%;
-    padding-left: 7%;
+    /* margin-left: 3%; */
 }
 
 .nav-menus .icon {
-    width: 11%;
+    width: 15%;
     padding: 2% 3%;
 }
 
@@ -134,7 +142,7 @@ input[type=text]:focus {
     display: flex;
     align-items: center;
     gap: 8%;
-    width: 35%;
+    width: 47%;
     padding: 2% 5%;
 }
 
@@ -144,7 +152,14 @@ input[type=text]:focus {
 
 .nav-user img {
     /* height: 100%; */
-    width: 30%;
+    width: 33%;
+}
+
+.navbar .create-thread-btn {
+    padding: 0.5% 0.5%;
+    width: 10%;
+    margin-left: 1%;
+    margin-right: 4%;
 }
 
 
@@ -155,7 +170,7 @@ input[type=text]:focus {
     width: 15%;
     /* height: 45%; */
     top: 12%;
-    right: 8%;
+    right: 13%;
     background-color: white;
     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
@@ -184,7 +199,7 @@ input[type=text]:focus {
 }
 
 .user-menu {
-    font-family: Ubuntu, sans-serif;
+    font-family: "Ubuntu", sans-serif;
     font-size: 1.1em;
     display: flex;
     flex-direction: column;
@@ -229,14 +244,14 @@ input[type=text]:focus {
     width: 15%;
     /* max-height: 32%; */
     top: 12%;
-    right: 15%;
+    right: 18.6%;
     background-color: white;
     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
     padding: 1% 1%;
-    visibility: hidden;
+    visibility:  hidden;
     opacity: 0;
-    font-family: Ubuntu, sans-serif;
+    font-family: "Ubuntu", sans-serif;
     z-index: 998;
     transition: all 0.5s;
 }
@@ -294,8 +309,8 @@ input[type=text]:focus {
 }
 
 .language-menu-container .triangle-container {
-    position: inherit;
-    top: 8%;
+    position: absolute;
+    top: -18%;
     right: 18.5%;
 }
 
@@ -314,14 +329,14 @@ input[type=text]:focus {
     /* height: 32%; */
     /* overflow-y: scroll; */
     top: 12%;
-    right: 19.2%;
+    right: 21.2%;
     background-color: white;
     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
     padding: 1% 1%;
     visibility: hidden;
     opacity: 0;
-    font-family: Ubuntu, sans-serif;
+    font-family: "Ubuntu", sans-serif;
     z-index: 998;
     transition: all 0.5s;
 }
@@ -372,3 +387,351 @@ input[type=text]:focus {
     transition: all 0.5s;
 }
 
+
+/* Thread Box */
+/* ============================================================================================================== */
+.thread-box-container {
+    position: fixed;
+    width: 65%;
+    height: 80%;
+    background-color: white;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
+    top: 52%;
+    left: 50%;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+    font-family: "Ubuntu", sans-serif;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.25s;
+    z-index: 999;
+}
+
+.thread-box-container.show {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.25s;
+}
+
+.thread-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.thread-box-header {
+    padding: 1.5% 2%;
+    display: flex;
+    width: 100%;
+    height: 10%;
+    align-items: center;
+    border-bottom: 2px solid var(--line-color);
+    padding-bottom: 0.5%;
+    position: relative;
+}
+
+.close-thread-box {
+    cursor: pointer;
+    width: 1.5%;
+    object-fit: contain;
+}
+
+.choose-post-btn {
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    width: 13%;
+    justify-content: space-between;
+    margin: 0 auto; 
+    transition: all 0.25s;
+    padding: 0.5% 1%;
+}   
+
+.choose-post-btn img {
+    width: 12%;
+    object-fit: contain;
+}
+
+.choose-post-btn:hover {
+    background-color: var(--grey-hover);
+    transition: all 0.25s;
+    border-radius: 30px;
+}   
+
+.thread-box-typing {
+    padding: 1.5% 2%;
+    width: 100%;
+    height: 80%;
+}
+
+.thread-title {
+    padding-top: 2%;
+    padding-bottom: 0.5%;
+    border-bottom: 2px solid var(--line-color);
+}
+
+.thread-title input[type=text] {
+    width: 100%;
+    border: none;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 2em;
+}
+
+input[type=text]:focus {
+    outline: none;
+}
+
+.thread-content textarea {
+    width: 100%;
+    /* min-height: 50%;
+    max-height: 100%; */
+    resize: none;
+    border: none;
+    font-family: "Ubuntu", sans-serif;
+    padding-top: 1%;
+    font-size: 1.2em;
+}
+
+.thread-content textarea:focus {
+    outline: none;
+}
+
+.thread-content textarea::-webkit-scrollbar {
+    display: none;
+}
+
+.thread-footer {
+    border-top: 2px solid var(--line-color);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 1% 3%;
+    height: 10%;
+}
+
+.thread-format {
+    display: flex;
+    list-style: none;
+    width: 10%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.thread-item {
+    width: 20%;
+    position: relative;
+    cursor: pointer;
+}
+
+.thread-item img {
+    width: 100%;
+}
+
+.add-image-chooser {
+    position: absolute;
+    z-index: 994;
+    opacity: 0;
+    cursor: pointer;
+    right: 0;
+    top: -30%;
+    font-size: 0;
+    width: 100%;
+    height: 120%;
+}
+
+.post-btn {
+    border-radius: 25px;
+    background-color: var(--blue);
+    padding: 1% 3%;
+    color: white;
+    cursor: pointer;
+    transition: all 0.25s;
+    font-size: 1.2em;
+}
+
+.post-btn:hover {
+    background-color: var(--blue-hover);
+    transition: all 0.25s;
+}
+
+.font-format-list {
+    display: flex;
+    position: absolute;
+    width: 35%;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 2.1%;
+    left: 1.5%;
+    background-color: white;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.25s;
+    z-index: 995;
+}
+
+.font-format-item.arrow {
+    cursor: pointer;
+}
+
+.font-format-list.show {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.25s;
+}
+
+.font-format-item {
+    width: 4%;
+}
+
+.font-format-item img {
+    width: 100%;
+}
+
+.font-format-item.arrow {
+    width: 8%;
+}
+
+
+/* Choose Post */
+/* ============================================================================================================== */
+.choose-post-container {
+    position: absolute;
+    width: 20%;
+    height: 40%;
+    background-color: white;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
+    top: 22%;
+    left: 70%;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+    font-family: "Ubuntu", sans-serif;
+    padding: 1.5% 2%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.25s;
+    z-index: 997;
+}
+
+.choose-post-container.show {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.25s;
+}
+
+.choose-post {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.choose-post .search-bar {
+    margin: 0 auto;
+    width: 100%;
+    font-size: 0.75em;
+    padding: 1% 9%;
+    box-shadow: none;
+    background-color: rgba(236, 236, 236, 1);
+}   
+
+.choose-post .search-bar img {
+    width: 6%;
+}
+
+.everyone-post {
+    display: flex;
+    align-items: center;
+    width: 12%;
+    gap: 100%;
+    padding: 10% 0%;
+    padding-bottom: 5%;
+}
+
+.everyone-post img {
+    width: 100%;
+}
+
+.other-community-post {
+    border-top: 2px solid var(--line-color);
+    display: flex;
+    flex-direction: column;
+    padding-top: 7%;
+    width: 100%;
+    height: 75%;
+    overflow-y: scroll;
+    gap: 10%;
+}
+
+.other-community-post::-webkit-scrollbar {
+    display: none;
+}
+
+.other-community-post .community {
+    display: flex;
+    width: 15%;
+    gap: 60%;
+}
+
+.other-community-post .community img {
+    border-radius: 30px ;
+    width: 100%;
+    object-fit: contain;
+}
+
+.choose-post-container .triangle-container {
+    border-left: none;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    filter: drop-shadow(-20px 0px 15px rgba(0, 0, 0, 0.3));
+
+    border-right: 30px solid white;
+
+    top: 5%;
+    left: -12%;
+}
+
+
+/* Thread Added */
+/* ============================================================================================================== */
+.thread-added-container {
+    width: 15%;
+    height: 5%;
+    position: fixed;
+    bottom: -150%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    background-color: rgba(75, 181, 67, 1);
+    font-family: "Ubuntu", sans-serif;
+    transition: all 0.5s;
+    padding: 1% 1%;
+    color: white;
+}
+
+.thread-added-container.show {
+    bottom: 3%;
+    transition: all 0.5s;
+}
+
+.thread-added {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.thread-added-container.show2 {
+    bottom: 3%;
+    transition: all 0.5s;
+    width: 11.5%;
+}
+
+.thread-added img {
+    width: 10%;
+    object-fit: contain;
+    transition: all 0.5s;
+}

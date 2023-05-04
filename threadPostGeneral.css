@@ -1,0 +1,965 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+:root {
+    --line-color: rgba(217, 217, 217, 1);
+    --grey-text: rgba(107, 107, 107, 1);
+    --blue: rgba(0, 121, 211, 1);
+    --blue-hover: rgba(26, 90, 255, 1);
+    --grey-hover: rgba(222, 222, 222, 1);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+
+/* Contents */
+/* ============================================================================================================== */
+body.active {
+    overflow: hidden;
+}
+
+.contents.active {
+    pointer-events: none;
+}
+
+/* Left Side Bar */
+/* ============================================================================================================== */
+.left-side-bar {
+    border-right: 2px solid var(--line-color);
+    padding: 6% 0% 0% 10%;
+    width: 15%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+}
+
+.left-side-bar .arrow-back img {
+    padding: 3%;
+    transition: all 0.25s;
+    width: 40%;
+}
+
+.left-side-bar .arrow-back img:hover {
+    background-color: var(--grey-hover);
+    border-radius: 50px;   
+    transition: all 0.25s;
+}
+
+
+/* Create Thread Button */
+/* ============================================================================================================== */
+.create-thread-btn {
+    background-color: var(--blue);
+    color: white;
+    padding: 5% 5%;
+    border-radius: 100px;
+    font-family: Ubuntu, sans sans-serif;
+    text-align: center;
+    cursor: pointer;
+}
+
+.create-thread-btn:hover {
+    background-color: var(--blue-hover);
+    transition: all 0.25s;
+}
+
+/* Main Content */
+/* ============================================================================================================== */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 4%;
+    width: 52%;
+    margin-left: 17.5%;
+    /* gap: 1.5%; */
+    height: fit-content;
+}
+
+/* Create Thread Home */
+/* ============================================================================================================== */
+.user-txt {
+    display: flex;
+    gap: 3%;
+    align-items: center;
+    /* height: 2%; */
+    width: 100%;
+    padding-left: 2%;
+}
+
+.user-txt img {
+    /* height: 100%; */
+    width: 6%;
+}
+
+.create-thread-txt {
+    width: 80%;
+    background-color: rgba(249, 249, 249, 1);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: var(--grey-text);
+    border-radius: 30px;
+    padding: 1.5% 3%;
+    font-family: Ubuntu, sans-serif;
+}
+
+
+/* Post */
+/* ============================================================================================================== */
+.post {
+    display: flex;
+    /* border-top: 2px solid var(--line-color); */
+    margin-top: 3%;
+    padding-top: 1.5%;
+    padding-left: 2%;
+    flex-direction: column;
+    font-family: Ubuntu, sans-serif;
+    width: 100%;
+    position: relative;
+}
+
+
+/* More Box */
+/* ============================================================================================================== */
+.more-box {
+    width: 24%;
+    height: 200px;
+    padding: 2% 2%;
+    position: absolute;
+    font-family: Ubuntu, sans-serif;
+    right: 9.8%;
+    top: 5%;
+    background-color: white;
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    font-size: 0.8em;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.25s;
+    z-index: 997;
+}
+
+.more-box.show {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.25s;
+}
+
+.more-list {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    justify-content: space-between;
+}
+
+.more-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 15%;
+}
+
+.more-item img {
+    width: 10%;
+    object-fit: contain;
+}
+
+.more-item.bookmark {
+    cursor: pointer;
+}
+
+
+/* Post Profile */
+/* ============================================================================================================== */
+.user-post-profile {
+    display: flex;
+    width: 90%;
+    align-items: center;
+    height: 3%;
+    gap: 2%;
+}
+
+.user-profile-img {
+    width: 6.5%;
+}
+
+.user-profile-img img {
+    /* height: 100%; */
+    width: 100%;
+    border-radius: 35px;
+}
+
+.post-profile {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.post-profile .username {
+    font-weight: bold;
+}
+
+.post-profile .post-time {
+    color: var(--grey-text);
+}
+
+.user-post-profile .fa-ellipsis {
+    margin: 0 auto;
+    margin-right: -0.5%;
+    font-size: 1.2em;
+    padding: 1% 1%;
+}
+
+.user-post-profile .fa-ellipsis:hover {
+    background-color: var(--grey-hover);
+    border-radius: 50px;
+    transition: all 0.25s;
+}
+
+.follow-btn {
+    color: var(--blue);
+}
+
+
+/* Post Content */
+/* ============================================================================================================== */
+.post-content {
+    width: 90%;
+}
+
+.post-content p {
+    display: block;
+    padding: 1% 0%;
+    font-size: 1.5em;
+}
+
+.post-img {
+    width: 100%;
+}
+
+
+/* Type Comment Container */
+/* ============================================================================================================== */
+.type-comment-container { 
+    width: 90%;
+    padding: 0% 2%;
+    padding-top: 5%;
+    position: relative;
+    font-family: Ubuntu, sans-serif;
+}   
+
+.type-comment {
+    border-top: 2px solid var(--line-color);
+    border-bottom: 2px solid var(--line-color);
+    padding: 1.5% 0%;
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    gap: 3%;
+}
+
+.type-comment img {
+    width: 6.5%;
+    object-fit: contain;
+}
+
+.comment-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 5px;
+}
+
+.comment-section textarea {
+    width: 100%;
+    resize: none;
+    border: none;
+    font-family: Ubuntu, sans-serif;
+}
+
+.comment-section textarea:focus {
+    outline: none;
+}
+
+.comment-section textarea::-webkit-scrollbar {
+    display: none;
+}
+
+.comment-section .thread-format {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 2%;
+    position: relative;
+    /* padding: 1% 0%; */
+}
+
+.comment-section .thread-format .thread-item {
+    width: 4%;
+}
+
+.comment-section .thread-format img {
+    width: 100%;
+}
+
+.comment-section .font-format-list {
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    
+}
+
+.comment-section .post-btn {
+    align-self: flex-end;
+    width: fit-content;
+    padding: 1% 4%;
+    text-align: center;
+}
+
+
+/* Comment List Container */
+/* ============================================================================================================== */
+.comment-lists-container {
+    width: 90%;
+    padding: 0% 2%;
+    padding-top: 0%;
+    font-family: Ubuntu, sans-serif;
+    margin-bottom: 15%;
+}
+
+.comment-lists {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.comment-lists.child {
+    border-left: 1.5px solid var(--line-color);
+    padding-left: 5%;   
+    width: 105%;
+}   
+
+.comment-item {
+    padding-top: 3%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+.comment-item .comment-profile {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 3%;
+}
+
+.comment-item .comment-profile img {
+    width: 6.5%;
+    border-radius: 50px;
+}
+
+.comment-item .feedback-bar {
+    width: 47%;
+    gap: 10%;
+}
+
+.comment-item .feedback-bar .icon img {
+    width: 50%;
+}
+
+.comment-item .feedback-bar .icon {
+    gap: 20%;
+}
+
+.comment-item .comment-btn {
+    width: 50%;
+}
+
+
+/* Feedback bar */
+/* ============================================================================================================== */
+.feedback-bar {
+    display: flex;
+    width: 50%;
+    /* height: 2.5%; */
+    align-items: center;
+    padding-top: 1%;
+    justify-content: space-between;
+    gap: 5%;
+    list-style: none;
+    position: relative;
+}
+
+.feedback-bar .icon {
+    display: flex;
+    align-items: center;
+    gap: 15%;
+}
+
+
+.feedback-bar .icon img {
+    /* height: 100%; */
+    width: 35%;
+    object-fit: contain;
+}
+
+.comment-btn {
+    width: 35%;
+}
+
+.comment .comment-btn img {
+    width: 100% !important;
+    object-fit: contain;
+}
+
+.icon.more-comment {
+    cursor: pointer;
+}
+
+.icon.upvote img, .icon.downvote img {
+    cursor: pointer;
+}
+
+
+/* More Comment */
+/* ============================================================================================================== */
+.more-comment-container {
+    position: absolute;
+    z-index: 998;
+    bottom: -320%;
+    left: 81.5%;
+    width: 27%;
+    background-color: white;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 3% 3%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s;
+}
+
+.more-comment-container.show {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.25s;
+}
+
+.more-comment-lists {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    width: 100%;
+    padding: 1%;
+    gap: 15px;
+}
+
+.more-comment-lists .more-comment-item {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 15%;
+    cursor: pointer;
+}
+
+.more-comment-lists .more-comment-item img {
+    width: 20%;
+    object-fit: contain;
+}
+
+.more-comment-lists .more-comment-item p {
+    font-size: 0.8em;
+}
+
+.more-comment-container .triangle-container {
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    
+    border-bottom: 30px solid white;
+
+    position: absolute;
+    top: -30%;
+    right: 19.5%;
+}
+
+
+.comment-item.self .more-comment-container {
+    bottom: -350%;
+    left: 70%;
+    width: 41%;
+}
+
+.comment-item.self .more-comment-lists .more-comment-item img{
+    width: 12%;
+}
+
+
+/* Right Side Bar */
+/* ============================================================================================================== */
+.right-side-bar {
+    width: 31.8%;
+    height: 100vh;
+    display: flex;
+    position: fixed;
+    border-left: 2px solid var(--line-color);
+    top: 0%;
+    right: 0%;
+}
+
+
+/* User Profile */
+/* ============================================================================================================== */
+.user-profile-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0% 8%;
+    padding-top: 19%;
+    font-family: Ubuntu, sans-serif;
+    font-size: 1.2em;
+}
+
+.user-profile {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.profile-pic-name {
+    gap: 8%;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.profile-pic-name img {
+    width: 15%;
+    border-radius: 50px;
+    object-fit: contain;
+}
+
+.profile-join {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 3%;
+}
+
+.profile-join img {
+    width: 4%;
+    object-fit: contain;
+}
+
+.follower-following {
+    width: 100%;
+    display: flex;
+    padding: 3% 0%;
+    border-top: 2px solid var(--line-color);
+    border-bottom: 2px solid var(--line-color);
+    justify-content: center;
+    align-items: center;
+    gap: 15%;
+}
+
+.follower-following p {
+    cursor: pointer;
+}
+
+.follower-following span {
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.unfollow-btn {
+    padding: 1.5% 15%;
+    background-color: white;
+    border-radius: 20px;
+    border: 2px solid var(--blue);
+    color: var(--blue);
+    transition: all 0.25s;
+}
+
+.unfollow-btn:hover {
+    background-color: rgba(26, 90, 255, 0.15);
+    border: 2px solid var(--blue);
+    color: var(--blue);
+    transition: all 0.25s;
+}
+
+.unfollow-btn.no-active {
+    color: white;
+    background-color: var(--blue);
+}
+
+.unfollow-btn.no-active:hover {
+    background-color: var(--blue-hover);
+}
+
+
+/* Message Button */
+/* ============================================================================================================== */
+.message-btn {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    justify-content: space-between;
+    bottom: 0%;
+    width: 12%;
+    left: 85%;
+    z-index: 997;
+    padding: 0.8% 1.5%;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.message-btn:hover {
+    box-shadow: inset 0px -3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.message-btn img {
+    width: 17%;
+}
+
+.message-btn .arrow {
+    width: 10%;
+}
+
+
+/* Messages */
+/* ============================================================================================================== */
+.messages-container {
+    width: 25%;
+    height: 50%;
+    position: fixed;
+    bottom: -150%;
+    right: 2%;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
+    background-color: white;
+    font-family: Ubuntu, sans-serif;
+    transition: all 0.3s;
+}
+
+.messages-container.show {
+    bottom: 0;
+    transition: all 0.3s;
+}
+
+.messages {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.messages-header {
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 4% 6%;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--line-color);
+}
+
+.messages-header:hover {
+    box-shadow: inset 0px 7px 11px rgba(0, 0, 0, 0.15);
+
+}
+
+.messages-header img {
+    width: 5%;
+}
+
+.messages-header-btn {
+    display: flex;
+    width: 12%;
+    justify-content: space-between;
+}
+
+.messages-header-btn img {
+    width: 35%;
+    object-fit: contain;
+}
+
+.messages-list {
+    display: flex;
+    width: 100%;
+    height: 80%;
+    overflow-y: scroll;
+    flex-direction: column;
+    padding: 1% 6%;
+    list-style: none;
+    margin-top: 1%;
+    
+}
+
+.messages-list::-webkit-scrollbar {
+    display: none;
+}
+
+.messages-list .message {
+    display: flex;
+    width: 100%;
+    gap: 2%;
+    padding: 2% 0%;
+    border-bottom: 2px solid var(--line-color);
+}
+
+.message-profile {
+    width: 14%;
+}
+
+.message-profile img {
+    border-radius: 50px;
+    width: 100%;
+}
+
+.message-content {
+    width: 88%;
+    display: flex;
+    flex-direction: column;
+}
+
+.message-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.message-name {
+    font-size: 1.2em;
+}
+
+.message-time {
+    color: var(--grey-text);
+}
+
+
+/* Bookmark Notification */
+/* ============================================================================================================== */
+.bookmark-notification-container {
+    width: 25%;
+    height: 5%;
+    position: fixed;
+    bottom: -150%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    background-color: rgba(75, 181, 67, 1);
+    font-family: Ubuntu, sans-serif;
+    transition: all 0.5s;
+    padding: 1% 1%;
+    color: white;
+}
+
+.bookmark-notification-container.show {
+    bottom: 3%;
+    transition: all 0.5s;
+}
+
+.bookmark-notification {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bookmark-notification img {
+    width: 8%;
+    object-fit: contain;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.bookmark-notification .undo-btn {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.bookmark-notification .notification-message {
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.bookmark-notification .notification-active {
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+
+/* Comment Confirmation */
+/* ============================================================================================================== */
+.comment-confirmation-container {
+    position: fixed;
+    z-index: 999;
+    font-family: Ubuntu, sans-serif;
+    width: 100%;
+    height: 100%;
+    top: 0%; 
+    left: 0%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s;
+}
+
+.comment-confirmation-container.show {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.25s;
+}
+
+.comment-confirmation-container::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.comment-confirmation {
+    position: absolute;
+    height: 15%;
+    width: 20%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    padding: 0.9%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
+}
+
+.comment-confirmation .confirmation-btn {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 5%;
+    gap: 10%;
+}
+
+.comment-confirmation .confirmation-btn p {
+    cursor: pointer;
+}
+
+.comment-confirmation .confirmation-btn p {
+    color: var(--blue);
+    border-radius: 10px;
+    padding: 1% 3%;
+    border: 2px solid var(--blue);
+    background-color: white;
+}
+
+.comment-confirmation .confirmation-btn .delete-btn {
+    background-color: var(--blue);
+    color: white;
+}
+
+
+/* Follower Following */
+/* ============================================================================================================== */
+.follower-following-view-container {
+    width: 65%;
+    height: 80%; 
+    position: fixed;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
+    background-color: white;
+    z-index: 999;
+    top: 52%;
+    left: 50%;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+    font-family: Ubuntu, sans-serif;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.25s;
+    overflow-y: scroll;
+}
+
+.follower-following-view-container.show {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.25s;
+}
+
+.follower-following-view-container::-webkit-scrollbar {
+    display: none;
+}
+
+.follower-following-header {
+    width: 100%;
+    padding: 1% 2%;
+    display: flex;
+    border-bottom: 2px solid var(--line-color);
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+
+.follower-following-header img {
+    width: 1.5%;
+    object-fit: contain;
+}
+
+.follower-following-header .search-bar-container {
+    width: 100%;
+}
+
+.follower-following-header .search-bar-container .search-bar {
+    box-shadow: none;
+    background-color: rgba(249, 249, 249, 1);
+    gap: 1%;
+}
+
+.follower-following-header .search-bar-container .search-bar img {
+    width: 2.5%;
+}
+
+.follower-following-view {
+    display: flex;
+    width: 100%;
+    padding: 0% 3%;
+}
+
+.follower-following-lists {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    list-style: none;
+}
+
+.follower-following-item {
+    display: flex;
+    width: 100%;
+    gap: 2%;
+    align-items: center;
+    padding: 1.5% 0%;
+    border-bottom: 2px solid var(--line-color);
+}
+
+.follower-following-item img {
+    width: 5%;
+    border-radius: 50px;
+}
+
+.follower-following-item .unfollow-btn {
+    margin: 0 auto;
+    margin-right: 0;
+    padding: 0.5% 5%;
+}

@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+
+:root{
+    --success-color: #23cc71;
+    --error-color:#e74c3c;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+
+}
+
+.container{
+    background-image: url(assets_2/loginpage.png);
+    width: 100%;
+    height: 135vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    padding: 12.8%;
+    padding-left: 17%;
+    padding-right: 17%;
+}
+
+.logo2{
+    display: flex;
+    width: 10%;
+    margin-top: -17%;
+    margin-left: -22%;
+}
+
+.logo2 img{
+    width: 90%;
+
+}
+
+.logo2 p3{
+    font-size: 25px;
+    color: #94E05C;
+    padding-top: 20%;
+}
+
+.form-box{
+    /* display: flex; */
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    margin-top: 10%;
+
+}
+
+.top{
+    display: flex;
+    justify-content: center;
+    /* width: 25%; */
+}
+
+.logo{
+    width: 20%;
+}
+
+.logo img{
+    width: 90%;
+}
+
+.text{
+    font-size: 45px;
+    color: #94E05C;
+    padding-top: 5%;
+    
+}
+
+.box{
+    display: flex;
+    gap: 45px;
+    padding: 3%;
+    border-color: lightgray;
+    border-style: solid;
+    border-width: 1px;
+    width: 110%;
+    margin-top: 10%;
+    border-radius: 25px;
+}
+
+.left{
+    margin-left: 5%;
+    margin-top: 4%;
+}
+.mid{
+    margin: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.right{
+    padding-left: 6%;
+    margin-right: 20%;
+    border-left: gray solid 1px;
+    
+}
+
+.right p1{
+    width: 100%;
+    font-size: 25px;
+    /* border-bottom:  gray solid 1px; */
+    
+}
+
+.form-box1{
+    margin-top: 10%;
+}
+
+.form-box1 input:focus{
+    outline: 0;
+}
+
+.form-box1.success input{
+    border-color: var(--success-color);
+    border-style: solid;
+    border-width: 1px;
+}
+
+.form-box1.error input{
+    border-color: var(--error-color);
+    border-style: solid;
+    border-width: 1px;
+}
+
+.form-box1 small{
+    color: var(--error-color);
+    position: absolute;
+    visibility: hidden;
+}
+
+.form-box1.error small{
+    visibility: visible;
+}
+
+input{
+    width: 115%;
+    height: 8vh;
+    border-radius: 10px;
+    border-style: none;
+    background-color: #f3f3f3;
+    padding: 5% 10%;
+}
+
+button{
+    background-color: #0079D3;
+    color: white;
+    border-radius: 15px;
+    border-style: none;
+    width: 100px;
+    height: 30px;
+    float: right;
+    margin-top: 7%;
+    transition: all 0.25s;
+}
+
+button:hover {
+    background-color: rgba(26, 90, 255, 1);
+    transition: all 0.25s;
+}
+
+.forgot{
+    float: right;
+    margin-top: 2%;
+    margin-left: 10%;
+   
+}
+
+p{
+    font-size: 15px;
+}
+
+.forgot p2{
+    color: #6B6B6B;
+    font-size: 13px;
+}
+
+.bottom{
+    text-align: center;
+    background-color: #E1E1E1;
+    height: 8vh;
+    padding-top: 2%;
+}
+
+
+

@@ -1,0 +1,792 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+:root {
+    --line-color: rgba(217, 217, 217, 1);
+    --grey-text: rgba(107, 107, 107, 1);
+    --blue: rgba(0, 121, 211, 1);
+    --blue-hover: rgba(26, 90, 255, 1);
+    --grey-hover: rgba(222, 222, 222, 1);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+
+/* Contents */
+/* ============================================================================================================== */
+body.active {
+    overflow: hidden;
+}
+
+.contents.active {
+    pointer-events: none;
+}
+
+
+/* Create Thread Button */
+/* ============================================================================================================== */
+.create-thread-btn {
+    background-color: var(--blue);
+    color: white;
+    padding: 5% 5%;
+    border-radius: 100px;
+    font-family: "Ubuntu", sans sans-serif;
+    text-align: center;
+    cursor: pointer;
+}
+
+.create-thread-btn:hover {
+    background-color: var(--blue-hover);
+    transition: all 0.25s;
+}
+
+/* Main Content */
+/* ============================================================================================================== */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    /* padding-top: 7%; */
+    width: 45%;
+    margin-left: 15%;
+    /* gap: 1.5%; */
+    height: fit-content;
+}
+
+
+/* Post */
+/* ============================================================================================================== */
+.post {
+    display: flex;
+    border-top: 2px solid var(--line-color);
+    margin-top: 3%;
+    padding-top: 1.5%;
+    padding-left: 2%;
+    flex-direction: column;
+    font-family: "Ubuntu", sans-serif;
+    width: 100%;
+    position: relative;
+}
+
+
+/* More Box */
+/* ============================================================================================================== */
+.more-box {
+    width: 24%;
+    height: 200px;
+    padding: 2% 2%;
+    position: absolute;
+    font-family: "Ubuntu", sans-serif;
+    right: 9.8%;
+    top: 5%;
+    background-color: white;
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    font-size: 0.8em;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.25s;
+    z-index: 997;
+}
+
+.more-box.show {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.25s;
+}
+
+.more-list {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    justify-content: space-between;
+}
+
+.more-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 15%;
+}
+
+.more-item img {
+    width: 10%;
+    object-fit: contain;
+}
+
+.more-item.bookmark {
+    cursor: pointer;
+}
+
+
+/* Community Profile */
+/* ============================================================================================================== */
+.banner-image-container {
+    width: 100%;
+    height: 35vh;
+    padding-top: 3%;
+}   
+
+.banner-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("assets/communityBanner.png");
+}
+
+.community-profile-container {
+    width: 100%;
+    padding: 0% 15%;
+    font-family: "Ubuntu", sans-serif;
+    position: relative;
+}
+
+.community-profile {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin-bottom: 3%;
+    gap: 2%;
+}
+
+.community-profile-pic {
+    width: 11%;
+    margin-top: -3%;
+}
+
+.community-profile-pic img {
+    border-radius: 150px;
+    width: 100%;
+    border: 10px solid white;
+    object-fit: contain;
+}
+
+.community-info {
+    padding-top: 1%;
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.profile-join {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10%;
+    color: var(--grey-text);
+}
+
+.profile-join img {
+    width: 7%;
+    object-fit: contain;
+}
+
+.follower-following {
+    width: 100%;
+    display: flex;
+    /* padding: 3% 0%; */
+    gap: 10%;
+}
+
+.follower-following .members {
+    cursor: pointer;
+}
+
+.community-btn {
+    justify-content: flex-end;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    margin-right: 0;
+    width: 15%;
+    gap: 15%;
+}
+
+.community-btn .fa-ellipsis {
+    padding: 1.5% 2%;
+    border-radius: 50px;
+    border: 1px solid black;
+}
+
+.unfollow-btn {
+    padding: 3% 25%;
+    background-color: white;
+    border-radius: 20px;
+    border: 2px solid var(--blue);
+    color: var(--blue);
+    transition: all 0.25s;
+}
+
+.unfollow-btn:hover {
+    background-color: rgba(26, 90, 255, 0.15);
+    border: 2px solid var(--blue);
+    color: var(--blue);
+    transition: all 0.25s;
+}
+
+.unfollow-btn.no-active {
+    color: white;
+    background-color: var(--blue);
+}
+
+.unfollow-btn.no-active:hover {
+    background-color: var(--blue-hover);
+}
+
+
+/* More Community */
+/* ============================================================================================================== */
+.more-community-container {
+    width: 11%;
+    height: 120%;
+    position: absolute;
+    top: 95%;
+    right: 22%;
+    padding: 0.8% 1%;
+    background-color: white;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    z-index: 997;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s;
+}
+
+.more-community-container.show {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.25s;
+}
+
+.more-community-lists {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.more-community-item {
+    display: flex;
+    align-items: center;
+    gap: 10%;
+    width: 100%;
+}
+
+.more-community-item img {
+    width: 10%;
+    object-fit: contain;
+}
+
+.more-community-container .triangle-container {
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    
+    border-bottom: 30px solid white;
+    position: absolute;
+    top: -20%;
+    right: 19%;
+    filter: drop-shadow(0px -10px 10px rgba(0, 0, 0, 0.25));
+}
+
+
+/* Community Menu */
+/* ============================================================================================================== */
+.community-menu-lists {
+    display: flex;
+    width: 100%;
+    gap: 10%;
+    list-style: none;
+    font-family: "Ubuntu", sans-serif;
+    padding-left: 5%;
+}
+
+.community-menu-item.active {
+    padding: 0% 20%;
+    padding-bottom: 15%;
+    border-bottom: 5px solid var(--blue);
+    position: relative;
+    z-index: 10;
+}
+
+
+/* Post Profile */
+/* ============================================================================================================== */
+.user-post-profile {
+    display: flex;
+    width: 90%;
+    align-items: center;
+    height: 3%;
+    gap: 2%;
+}
+
+.user-profile-img {
+    width: 6.5%;
+}
+
+.user-profile-img img {
+    /* height: 100%; */
+    width: 100%;
+    border-radius: 35px;
+}
+
+.post-profile {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.post-profile .username {
+    font-weight: bold;
+}
+
+.post-profile .post-time {
+    color: var(--grey-text);
+}
+
+.user-post-profile .fa-ellipsis {
+    margin: 0 auto;
+    margin-right: -0.5%;
+    font-size: 1.2em;
+    padding: 1% 1%;
+}
+
+.user-post-profile .fa-ellipsis:hover {
+    background-color: var(--grey-hover);
+    border-radius: 50px;
+    transition: all 0.25s;
+}
+
+.follow-btn {
+    color: var(--blue);
+}
+
+
+/* Post Content */
+/* ============================================================================================================== */
+.post-content {
+    width: 90%;
+}
+
+.post-content p {
+    display: block;
+    padding: 1% 0%;
+    font-size: 1.5em;
+}
+
+.post-img {
+    width: 100%;
+}
+
+
+/* Feedback bar */
+/* ============================================================================================================== */
+.feedback-bar {
+    display: flex;
+    width: 50%;
+    /* height: 2.5%; */
+    align-items: center;
+    padding-top: 1%;
+    justify-content: space-between;
+    gap: 5%;
+}
+
+.feedback-bar .icon {
+    display: flex;
+    align-items: center;
+    gap: 15%;
+}
+
+
+.feedback-bar .icon img {
+    /* height: 100%; */
+    width: 35%;
+    object-fit: contain;
+}
+
+.comment-btn {
+    width: 35%;
+}
+
+.comment .comment-btn img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.post.bottom {
+    margin-bottom: 20%;
+}
+
+.post.top {
+    margin-top: 1%;
+}
+
+.icon.upvote img, .icon.downvote img {
+    cursor: pointer;
+}
+
+
+/* Right Side Bar */
+/* ============================================================================================================== */
+.right-side-bar {
+    width: 40%;
+    display: flex;
+    position: absolute;
+    /* border-left: 2px solid var(--line-color); */
+    top: 43.1%;
+    right: 0%;
+}
+
+
+/* Related Community */
+/* ============================================================================================================== */
+.related-community-container {
+    /* height: 50%; */
+    width: 100%;
+    padding: 10%;
+    padding-right: 30%;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.related-community {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.related-community-lists {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    list-style: none;
+    padding-top: 3%;
+    gap: 10px;
+}
+
+.related-community h2 {
+    border-bottom: 2px solid var(--line-color);
+    padding-bottom: 1.5%;
+}
+
+.related-community-item {
+    display: flex;
+    width: 100%;
+    gap: 5%;
+    align-items: center;
+}
+
+.related-community-item  img {
+    width: 12%;
+    object-fit: contain;
+    border-radius: 50px;
+}
+
+.related-community-item .unfollow-btn {
+    padding: 0.8% 5%;
+    margin: 0 auto;
+    margin-right: 0;
+}
+
+
+/* Message Button */
+/* ============================================================================================================== */
+.message-btn {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    justify-content: space-between;
+    bottom: 0%;
+    width: 12%;
+    left: 85%;
+    z-index: 997;
+    padding: 0.8% 1.5%;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.message-btn:hover {
+    box-shadow: inset 0px -3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.message-btn img {
+    width: 17%;
+}
+
+.message-btn .arrow {
+    width: 10%;
+}
+
+
+/* Messages */
+/* ============================================================================================================== */
+.messages-container {
+    width: 25%;
+    height: 50%;
+    position: fixed;
+    bottom: -150%;
+    right: 2%;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
+    background-color: white;
+    font-family: "Ubuntu", sans-serif;
+    transition: all 0.3s;
+    z-index: 998;
+}
+
+.messages-container.show {
+    bottom: 0;
+    transition: all 0.3s;
+}
+
+.messages {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.messages-header {
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 4% 6%;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--line-color);
+}
+
+.messages-header:hover {
+    box-shadow: inset 0px 7px 11px rgba(0, 0, 0, 0.15);
+
+}
+
+.messages-header img {
+    width: 5%;
+}
+
+.messages-header-btn {
+    display: flex;
+    width: 12%;
+    justify-content: space-between;
+}
+
+.messages-header-btn img {
+    width: 35%;
+    object-fit: contain;
+}
+
+.messages-list {
+    display: flex;
+    width: 100%;
+    height: 80%;
+    overflow-y: scroll;
+    flex-direction: column;
+    padding: 1% 6%;
+    list-style: none;
+    margin-top: 1%;
+    
+}
+
+.messages-list::-webkit-scrollbar {
+    display: none;
+}
+
+.messages-list .message {
+    display: flex;
+    width: 100%;
+    gap: 2%;
+    padding: 2% 0%;
+    border-bottom: 2px solid var(--line-color);
+}
+
+.message-profile {
+    width: 14%;
+}
+
+.message-profile img {
+    border-radius: 50px;
+    width: 100%;
+}
+
+.message-content {
+    width: 88%;
+    display: flex;
+    flex-direction: column;
+}
+
+.message-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.message-name {
+    font-size: 1.2em;
+}
+
+.message-time {
+    color: var(--grey-text);
+}
+
+
+/* Bookmark Notification */
+/* ============================================================================================================== */
+.bookmark-notification-container {
+    width: 25%;
+    height: 5%;
+    position: fixed;
+    bottom: -150%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    background-color: rgba(75, 181, 67, 1);
+    font-family: "Ubuntu", sans-serif;
+    transition: all 0.5s;
+    padding: 1% 1%;
+    color: white;
+}
+
+.bookmark-notification-container.show {
+    bottom: 3%;
+    transition: all 0.5s;
+}
+
+.bookmark-notification {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bookmark-notification img {
+    width: 8%;
+    object-fit: contain;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.bookmark-notification .undo-btn {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.bookmark-notification .notification-message {
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.bookmark-notification .notification-active {
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+
+/* Follower Following */
+/* ============================================================================================================== */
+.follower-following-view-container {
+    width: 65%;
+    height: 80%; 
+    position: fixed;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
+    background-color: white;
+    z-index: 999;
+    top: 52%;
+    left: 50%;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+    font-family: "Ubuntu", sans-serif;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.25s;
+    overflow-y: scroll;
+}
+
+.follower-following-view-container.show {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.25s;
+}
+
+.follower-following-view-container::-webkit-scrollbar {
+    display: none;
+}
+
+.follower-following-header {
+    width: 100%;
+    padding: 1% 2%;
+    display: flex;
+    border-bottom: 2px solid var(--line-color);
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+
+.follower-following-header img {
+    width: 1.5%;
+    object-fit: contain;
+}
+
+.follower-following-header .search-bar-container {
+    width: 100%;
+}
+
+.follower-following-header .search-bar-container .search-bar {
+    box-shadow: none;
+    background-color: rgba(236, 236, 236, 1);
+    gap: 1%;
+}
+
+.follower-following-header .search-bar-container .search-bar input[type=text] {
+    background-color: rgba(236, 236, 236, 1);
+}
+
+.follower-following-header .search-bar-container .search-bar img {
+    width: 2.5%;
+}
+
+.follower-following-view {
+    display: flex;
+    width: 100%;
+    padding: 0% 3%;
+}
+
+.follower-following-lists {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    list-style: none;
+}
+
+.follower-following-item {
+    display: flex;
+    width: 100%;
+    gap: 2%;
+    align-items: center;
+    padding: 1.5% 0%;
+    border-bottom: 2px solid var(--line-color);
+}
+
+.follower-following-item img {
+    width: 5%;
+    border-radius: 50px;
+}
+
+.follower-following-item .unfollow-btn {
+    margin: 0 auto;
+    margin-right: 0;
+    padding: 0.5% 5%;
+}

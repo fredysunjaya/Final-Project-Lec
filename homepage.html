@@ -14,10 +14,10 @@
 </head>
 <body>
     <div class="navbar">
-        <div class="logo">
+        <a href="homepage.html" class="logo">
             <img src="assets/Logo HCI.png">
-                <p>confab</p>
-        </div>
+            <p>confab</p>
+        </a>
         <div class="search-bar-container">
             <div class="search-bar">
                 <img src="assets/searchBtn.png">
@@ -35,29 +35,32 @@
                 <p>User404</p>
             </div>
         </div>
+        <div class="create-thread-btn thread-btn">
+            <p>Create Thread</p>
+        </div>
     </div>
     <div class="user-menu-container">
         <ul class="user-menu">
             <li class="profile">
-                <a href="">
+                <a href="profilePost.html">
                     <img src="assets/profile.png">
                     <p>Profile</p>
                 </a>
             </li>
             <li class="message">
-                <a href="">
+                <a href="message.html">
                     <img src="assets/messages.png">
                     <p>Message</p>
                 </a>
             </li>
             <li class="bookmarks">
-                <a href="">
+                <a href="profileBookmark.html">
                     <img src="assets/bookmark.png">
                     <p>Bookmark</p>
                 </a>
             </li>
             <li class="about">
-                <a href="">
+                <a href="about.html">
                     <img src="assets/about.png">
                     <p>About</p>
                 </a>
@@ -69,7 +72,7 @@
                 </a>
             </li>
             <li class="help">
-                <a href="">
+                <a href="helpage.html">
                     <img src="assets/help.png">
                     <p>Help</p>
                 </a>
@@ -81,7 +84,7 @@
                 </a>
             </li>
             <li class="logout">
-                <a href="">
+                <a href="login.html">
                     <img src="assets/logout.png">
                     <p>Log Out</p>
                 </a>
@@ -170,9 +173,6 @@
                     </a>
                 </li>
             </ul>
-            <div class="create-thread-btn thread-btn">
-                <h2>Create Thread</h2>
-            </div>
         </div>
         <div class="main-content">
             <div class="user-txt">
@@ -207,16 +207,20 @@
                     </ul>
                 </div>
                 <div class="user-post-profile">
-                    <a href="" class="profile-link user-profile-img">
+                    <a href="otherUserProfile.html" class="profile-link user-profile-img">
                         <img src="assets/users(3).png">
                     </a>
-                    <div href="" class="profile-link post-profile">
-                        <a href="" class="username">Lucy</a>
+                    <div class="profile-link post-profile">
+                        <div class="username">
+                            <a href="otherUserProfile.html">Lucy</a> 
+                            <span>·</span> 
+                            <span class="follow-btn">Follow</span>
+                        </div>
                         <p class="post-time">Jan 13</p>
                     </div>
                     <i class="fa-solid fa-ellipsis"></i>
                 </div>
-                <a href="" class="post-content">
+                <a href="threadPost.html" class="post-content">
                     <p>Do anyone know where is this?</p>
                     <img class="post-img" src="assets/postImageHome(1).png">
                 </a>
@@ -245,206 +249,12 @@
                     </li>
                 </ul>
             </div>
-            <div class="post follow">
-                <div class="more-box">
-                    <ul class="more-list">
-                        <li class="more-item unfollow">
-                            <img src="assets/unfollow.png">
-                            <p>Unfollow</p>
-                        </li>
-                        <li class="more-item show-more">
-                            <img src="assets/showMore.png">
-                            <p>Show more like this</p>
-                        </li>
-                        <li class="more-item notInterested">
-                            <img src="assets/notInterested.png">
-                            <p>Not interested in this</p>
-                        </li>
-                        <li class="more-item bookmark">
-                            <img src="assets/bookmark(2).png">
-                            <p>Bookmark</p>
-                        </li>
-                        <li class="more-item report">
-                            <img src="assets/report.png">
-                            <p>Report</p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="user-post-profile">
-                    <a href="" class="profile-link user-profile-img">
-                        <img src="assets/userHome(2).png">
-                    </a>
-                    <div href="" class="profile-link post-profile">
-                        <a href="" class="username">Photography</a>
-                        <p class="post-time">Posted by NeverMindMyDiary · 3d</p>
-                    </div>
-                    <i class="fa-solid fa-ellipsis"></i>
-                </div>
-                <a href="" class="post-content">
-                    <p>When does it make sense for a beginner to shoot RAW?</p>
-                    <!-- <img class="post-img" src="assets/postImageHome(1).png"> -->
-                </a>
-                <ul class="feedback-bar">
-                    <li class="icon upvote">
-                        <img src="assets/upVote.png" class="up-vote-btn">
-                        <p>300</p>
-                    </li>
-                    <li class="icon downvote">
-                        <img src="assets/downVote.png" class="down-vote-btn">
-                        <p>10</p>
-                    </li>
-                    <li class="icon comment">
-                        <a class="comment-btn">
-                            <img src="assets/comment.png">
-                        </a>
-                        <p>20</p>
-                    </li>
-                    <li class="icon">
-                        <img src="assets/view.png" class="view-btn">
-                        <p>500</p>
-                    </li>
-                    <li class="icon">
-                        <img src="assets/share.png" class="btn">
-                        <p>15</p>
-                    </li>
-                </ul>
-            </div>
-            <div class="post follow">
-                <div class="more-box">
-                    <ul class="more-list">
-                        <li class="more-item unfollow">
-                            <img src="assets/unfollow.png">
-                            <p>Unfollow</p>
-                        </li>
-                        <li class="more-item show-more">
-                            <img src="assets/showMore.png">
-                            <p>Show more like this</p>
-                        </li>
-                        <li class="more-item notInterested">
-                            <img src="assets/notInterested.png">
-                            <p>Not interested in this</p>
-                        </li>
-                        <li class="more-item bookmark">
-                            <img src="assets/bookmark(2).png">
-                            <p>Bookmark</p>
-                        </li>
-                        <li class="more-item report">
-                            <img src="assets/report.png">
-                            <p>Report</p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="user-post-profile">
-                    <a href="" class="profile-link user-profile-img">
-                        <img src="assets/userHome(3).png">
-                    </a>
-                    <div href="" class="profile-link post-profile">
-                        <a href="" class="username">Programming</a>
-                        <p class="post-time">Posted by Max · Jan 27</p>
-                    </div>
-                    <i class="fa-solid fa-ellipsis"></i>
-                </div>
-                <a href="" class="post-content">
-                    <p>I love programming</p>
-                    <img class="post-img" src="assets/postImageHome(2).png">
-                </a>
-                <ul class="feedback-bar">
-                    <li class="icon upvote">
-                        <img src="assets/upVote.png" class="up-vote-btn">
-                        <p>300</p>
-                    </li>
-                    <li class="icon downvote">
-                        <img src="assets/downVote.png" class="down-vote-btn">
-                        <p>10</p>
-                    </li>
-                    <li class="icon comment">
-                        <a class="comment-btn">
-                            <img src="assets/comment.png">
-                        </a>
-                        <p>20</p>
-                    </li>
-                    <li class="icon">
-                        <img src="assets/view.png" class="view-btn">
-                        <p>500</p>
-                    </li>
-                    <li class="icon">
-                        <img src="assets/share.png" class="btn">
-                        <p>15</p>
-                    </li>
-                </ul>
-            </div>
-            <div class="post follow">
-                <div class="more-box">
-                    <ul class="more-list">
-                        <li class="more-item unfollow">
-                            <img src="assets/unfollow.png">
-                            <p>Unfollow</p>
-                        </li>
-                        <li class="more-item show-more">
-                            <img src="assets/showMore.png">
-                            <p>Show more like this</p>
-                        </li>
-                        <li class="more-item notInterested">
-                            <img src="assets/notInterested.png">
-                            <p>Not interested in this</p>
-                        </li>
-                        <li class="more-item bookmark">
-                            <img src="assets/bookmark(2).png">
-                            <p>Bookmark</p>
-                        </li>
-                        <li class="more-item report">
-                            <img src="assets/report.png">
-                            <p>Report</p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="user-post-profile">
-                    <a href="" class="profile-link user-profile-img">
-                        <img src="assets/userHome(4).png">
-                    </a>
-                    <div href="" class="profile-link post-profile">
-                        <a href="" class="username">Mobile Legends</a>
-                        <p class="post-time">Posted by ruitachi · Jan 13</p>
-                    </div>
-                    <i class="fa-solid fa-ellipsis"></i>
-                </div>
-                <a href="" class="post-content">
-                    <p>This Is It The Final Version Of Yin's JJK Ultimate</p>
-                    <img class="post-img" src="assets/postImageHome(3).png">
-                </a>
-                <ul class="feedback-bar">
-                    <li class="icon upvote">
-                        <img src="assets/upVote.png" class="up-vote-btn">
-                        <p>300</p>
-                    </li>
-                    <li class="icon downvote">
-                        <img src="assets/downVote.png" class="down-vote-btn">
-                        <p>10</p>
-                    </li>
-                    <li class="icon comment">
-                        <a class="comment-btn">
-                            <img src="assets/comment.png">
-                        </a>
-                        <p>20</p>
-                    </li>
-                    <li class="icon">
-                        <img src="assets/view.png" class="view-btn">
-                        <p>500</p>
-                    </li>
-                    <li class="icon">
-                        <img src="assets/share.png" class="btn">
-                        <p>15</p>
-                    </li>
-                </ul>
-            </div>
         </div>
         <div class="right-side-bar">
-            <div class="message-btn-container">
-                <div class="message-btn">
-                    <img src="assets/messageBtn.png">
-                    <p>Message</p>
-                    <img class="arrow" src="assets/arrowUp.png">
-                </div>
+            <div class="message-btn">
+                <img src="assets/messageBtn.png">
+                <p>Message</p>
+                <img class="arrow" src="assets/arrowUp.png">
             </div>
         </div>
     </div>
@@ -599,8 +409,14 @@
             <div class="thread-footer">
                 <ul class="thread-format">
                     <li class="thread-item font-format"><img src="assets/fontFormat.png"></li>
-                    <li class="thread-item add-image"><img src="assets/addImage.png"></li>
-                    <li class="thread-item add-video"><img src="assets/addVideo.png"></li>
+                    <li class="thread-item add-image">
+                        <img src="assets/addImage.png">
+                        <input type="file" class="add-image-chooser">
+                    </li>
+                    <li class="thread-item add-video">
+                        <img src="assets/addVideo.png">
+                        <input type="file" class="add-image-chooser">
+                    </li>
                 </ul>
                 <p class="post-btn">Post</p>
             </div>
@@ -618,7 +434,12 @@
             </ul>
         </div>
     </div>
-
+    <div class="thread-added-container">
+        <div class="thread-added">
+            <img src="assets/checkmarkWhite.png">
+            <p>Thread Added Successfully</p>
+        </div>
+    </div>
 </body>
 <script src="homepage.js"></script>
 <script src="navbarfooter.js"></script>
