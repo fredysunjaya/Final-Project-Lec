@@ -17,12 +17,10 @@ body{
     font-family: "Ubuntu", sans-serif;
 }
 
-
-
 .container{
     position: relative;
     width: 100%;
-    height: calc(100vh - 1px);
+    height: calc(96vh - 1px);
     background: #fff;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.06);
     display: flex;
@@ -37,15 +35,17 @@ body{
 .leftSide{
     /* display: flex; */
     position: relative;
-    flex: 65%;
+    width: 55%;
     margin-left: 8%;
     margin-top: 5%;
     background: #fff;
 }
 
 .rightSide{
-    position: relative;
-    flex: 35%;
+    position: fixed;
+    width: 35%;
+    height: 100vh;
+    right: 0;
     background: #fff;
     border-left: gray solid 1px;
 }
@@ -88,7 +88,7 @@ body{
     margin-top: -0.1%;
     overflow-y: auto;
     width: 98%;
-    height: calc(100% - 100px);
+    height: calc(100% - 20px);
 }
 
 .bookmarked-list::-webkit-scrollbar{
@@ -304,60 +304,17 @@ body{
 }
 
 .info-followers{
-    margin-top: 2%;
+    margin: 2% 0%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 20px;
 }
 
-p1{
-    font-weight: 200px;
-    font-size: 20px;
-    /* padding-top: 1%; */
-    margin-left: 3%;
-    margin-bottom: 3%;
+.info-followers p1, p2 {
+    font-size: 1.4em;
 }
 
-p2{
-    font-weight: 200px;
-    font-size: 20px;
-    margin-left: 0%;
+.profile-about p:first-child {
+    font-size: 1.3em;
 }
-
-p{
-    font-size: 11px;
-    margin-top: 3%;
-    margin-right: 10%;
-}
-
-
-
-
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

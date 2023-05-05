@@ -36,9 +36,6 @@ function outsideClose() {
     if(messages.classList.contains("show")) {
         messages.classList.remove("show")
     } 
-    if(moreBox[moreBoxIndex].classList.contains("show")) {
-        moreBox[moreBoxIndex].classList.remove("show")
-    } 
     if(choosePostMenu.classList.contains("show")) {
         choosePostMenu.classList.remove("show")
     }

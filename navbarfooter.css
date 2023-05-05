@@ -651,6 +651,11 @@ input[type=text]:focus {
     background-color: rgba(236, 236, 236, 1);
 }   
 
+.choose-post .search-bar input[type=text] {
+    background-color: rgba(236, 236, 236, 1);
+
+}
+
 .choose-post .search-bar img {
     width: 6%;
 }

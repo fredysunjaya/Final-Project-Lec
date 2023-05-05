@@ -196,6 +196,40 @@ let postsAssets = [
             postRef: "threadPostGeneral.html?4&3",
         },
     ],
+    [
+        {   
+            posterPic: "assets/users(2).png",
+            posterName: "User404",
+            postDate: "5h",
+            postDesc: "Best Game No Doubt!",
+            postImg: "assets/postimg1.png",
+            postRef: "threadPost.html?5&0",
+        },
+        {   
+            posterPic: "assets/gamernewgames.png",
+            posterName: "Gamer New Games",
+            postDate: "Posted by User404 · 3d",
+            postDesc: "Always Big Fan of Pokemon",
+            postImg: "assets/postimg2.png",
+            postRef: "threadPostGeneral.html?5&1",
+        },
+        {   
+            posterPic: "assets/gamerzone.png",
+            posterName: "Gamer Zone",
+            postDate: "Posted by User404 · 5d",
+            postDesc: "Time for Gaming",
+            postImg: "assets/postimg3.png",
+            postRef: "threadPostGeneral.html?5&2",
+        },
+        {   
+            posterPic: "assets/harrypotter.png",
+            posterName: "Harry Potter Fan",
+            postDate: "Posted by User404 · Jan 28",
+            postDesc: "Start to love it!",
+            postImg: "assets/postimg4.png",
+            postRef: "threadPostGeneral.html?5&3",
+        },
+    ],
 ]
 
 let position = parent.document.URL.substring(parent.document.URL.indexOf('?') + 1, parent.document.URL.length).split("&");
@@ -216,6 +250,8 @@ if(postIndex1 == 0) {
     back.href = "communityPosts.html";
 } else if(postIndex1 == 4) {
     back.href = "otherUserProfile.html";
+} else if(postIndex1 == 5) {
+    back.href = "profilePost.html";
 }
 
 let posterPic = document.querySelectorAll(".poster-img")

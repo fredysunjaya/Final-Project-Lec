@@ -84,9 +84,9 @@ function addClick() {
 
 
 messageBtn.addEventListener("click", function(e) {
+    outsideClose()
     messages.classList.add("show")
     setTimeout(() => {
-        outsideClose()
         navbar2.addEventListener("click", outsideClose)
         mainContent.addEventListener("click", outsideClose)
         leftBar.addEventListener("click", outsideClose)

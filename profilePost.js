@@ -82,11 +82,11 @@ function bottomPost() {
 }
 
 function topPost() {
+    if(posts.length > 1) {
+        posts[posts.length - 1].classList.remove("top")
+    }
     posts[0].classList.add("top")
 }
-
-topPost()
-bottomPost()
 
 function outsideClose() {
     if(moreBox[moreBoxIndex].classList.contains("show")) {
@@ -107,36 +107,36 @@ function outsideClose() {
 
 let postsAssets = [
     {   
-        posterPic: "assets/postimg1.png",
-        posterName: "Lucy",
-        postDate: "Jan 13",
-        postDesc: "Do anyone know where is this?",
+        posterPic: "assets/users(2).png",
+        posterName: "User404",
+        postDate: "5h",
+        postDesc: "Best Game No Doubt!",
         postImg: "assets/postimg1.png",
-        postRef: "threadPost.html",
+        postRef: "threadPost.html?5&0",
     },
     {   
         posterPic: "assets/gamernewgames.png",
-        posterName: "Photography",
-        postDate: "Posted by NeverMindMyDiary · 3d",
-        postDesc: "When does it makes sense for a beginner to shoot RAW?",
+        posterName: "Gamer New Games",
+        postDate: "Posted by User404 · 3d",
+        postDesc: "Always Big Fan of Pokemon",
         postImg: "assets/postimg2.png",
-        postRef: "threadPostGeneral.html?0&1",
+        postRef: "threadPostGeneral.html?5&1",
     },
     {   
         posterPic: "assets/gamerzone.png",
-        posterName: "Programming",
-        postDate: "Posted by Max · Jan 27",
-        postDesc: "I love programming",
+        posterName: "Gamer Zone",
+        postDate: "Posted by User404 · 5d",
+        postDesc: "Time for Gaming",
         postImg: "assets/postimg3.png",
-        postRef: "threadPostGeneral.html?0&2",
+        postRef: "threadPostGeneral.html?5&2",
     },
     {   
         posterPic: "assets/harrypotter.png",
-        posterName: "Mobile Legends",
-        postDate: "Posted by ruitachi · Jan 13",
-        postDesc: "This Is It The Final Version Of Yin's JJK Ultimate",
+        posterName: "Harry Potter Fan",
+        postDate: "Posted by User404 · Jan 28",
+        postDesc: "Start to love it!",
         postImg: "assets/postimg4.png",
-        postRef: "threadPostGeneral.html?0&3",
+        postRef: "threadPostGeneral.html?5&3",
     },
 ]
 
@@ -176,6 +176,7 @@ function addPost() {
     moreBox = document.querySelectorAll(".more-box");
     bookmarkBtn = document.querySelectorAll(".more-item.bookmark");
     bottomPost()
+    topPost()
 }
 
 for(let i = 0; i < 3; i++) {
