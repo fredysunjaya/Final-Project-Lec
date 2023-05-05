@@ -303,7 +303,7 @@ body.active {
 
 .community-menu-item.active {
     padding: 0% 20%;
-    padding-bottom: 15%;
+    padding-bottom: 16%;
     border-bottom: 5px solid var(--blue);
     position: relative;
     z-index: 10;
