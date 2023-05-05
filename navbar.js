@@ -18,13 +18,12 @@ let choosePostBtn = document.querySelector(".choose-post-btn")
 let choosePostMenu = document.querySelector(".choose-post-container")
 let postThreadBtn = document.querySelector(".thread-footer .post-btn")
 let threadAdded = document.querySelector(".thread-added-container")
-console.log(createThreads);
-console.log('test');
 
 userBtn.addEventListener("click", function(e) {
     userMenu.classList.add("show");
     setTimeout(() => {
         navbar.addEventListener("click", navbarClose)
+        contents.addEventListener("click", navbarClose)
     }, 1)
 })
 
@@ -32,6 +31,7 @@ languageBtn.addEventListener("click", function(e) {
     languageMenu.classList.add("show");
     setTimeout(() => {
         navbar.addEventListener("click", navbarClose)
+        contents.addEventListener("click", navbarClose)
     }, 1)
 })
 
@@ -39,32 +39,21 @@ notificationBtn.addEventListener("click", function(e) {
     notificationMenu.classList.add("show");
     setTimeout(() => {
         navbar.addEventListener("click", navbarClose)
+        contents.addEventListener("click", navbarClose)
     }, 1)
 })
 
-contents.addEventListener("click", function(e) {
-    if(userMenu.classList.contains("show")) {
-        userMenu.classList.remove("show");
-    }   
-    if(languageMenu.classList.contains("show")) {
-        languageMenu.classList.remove("show");
-    }
-    if(notificationMenu.classList.contains("show")) {
-        notificationMenu.classList.remove("show");
-    }  
-})
-
-threadBox2.addEventListener("click", function(e) {
-    if(userMenu.classList.contains("show")) {
-        userMenu.classList.remove("show");
-    }   
-    if(languageMenu.classList.contains("show")) {
-        languageMenu.classList.remove("show");
-    }
-    if(notificationMenu.classList.contains("show")) {
-        notificationMenu.classList.remove("show");
-    }
-})
+// threadBox2.addEventListener("click", function(e) {
+//     if(userMenu.classList.contains("show")) {
+//         userMenu.classList.remove("show");
+//     }   
+//     if(languageMenu.classList.contains("show")) {
+//         languageMenu.classList.remove("show");
+//     }
+//     if(notificationMenu.classList.contains("show")) {
+//         notificationMenu.classList.remove("show");
+//     }
+// })
 
 function navbarClose() {
     if(userMenu.classList.contains("show")) {
@@ -78,6 +67,7 @@ function navbarClose() {
     } 
     setTimeout(() => {
         navbar.removeEventListener("click", navbarClose);
+        contents.removeEventListener("click", navbarClose);
     }, 1)
 }
 
@@ -95,9 +85,8 @@ closeFontFormats.forEach((closeFontFormat, index) => {
 
 createThreads.forEach(createThread => {
     createThread.addEventListener("click", function(e) {
-        console.log('clicked');
         threadBox.classList.add("show");
-        // document.querySelector(".contents").classList.add("active");
+        document.querySelector(".contents").classList.add("active");
         document.querySelector("body").classList.add("active");
         document.querySelector(".thread-title input").value = ""
         document.querySelector(".thread-content textarea").value = ""
@@ -114,10 +103,6 @@ choosePostBtn.addEventListener("click", function(e) {
     choosePostMenu.classList.add("show");
     choosePostMenu.querySelector(".search-bar input").value = ""
     setTimeout(() => {
-        navbar2.addEventListener("click", outsideClose)
-        mainContent.addEventListener("click", outsideClose)
-        leftBar.addEventListener("click", outsideClose)
-        rightBar.addEventListener("click", outsideClose)
         document.querySelector(".thread-box").addEventListener("click", outsideClose)
     }, 1)
 })

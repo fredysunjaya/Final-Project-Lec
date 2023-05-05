@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     <title>Create Message</title>
     <link rel="stylesheet" type="text/css" href="createMessage.css">
     <link rel="stylesheet" href="navbar.css">
@@ -121,12 +124,13 @@
             <!-- header -->
             <div class="header">
                 <div class="userimg">
-                    <a href="createMessage.html" class="newMessageBtn"></a>
                     <h1>Messages</h1>
-                    <div class="new_message">
+                    <button class="new_message">
                         <ion-icon name="chatbox-ellipses"></ion-icon>
-                        <h4>New Message</h4>
-                    </div>
+                        <a href="createMessage.html" class="newMessageBtn">
+                            <h4>New Message</h4>
+                        </a>
+                    </button>
                 </div>
             </div>
             <!-- search chat -->
@@ -138,7 +142,7 @@
             </div>
             <!-- chat list -->
             <div class="chatlist">
-                <div class="block active">
+                <a href="message.html" class="block active">
                     <div class="imgbx">
                         <img src="assets/users(4).png" class="cover"></img>
                     </div>
@@ -151,8 +155,8 @@
                             <p>Stay happy, stay peaceful, stay the way you are and stay healthy brother</p>
                         </div>
                     </div>
-                </div>
-                <div class="block">
+                </a>
+                <a href="message.html" class="block">
                     <div class="imgbx">
                         <img src="assets/users(4).png" class="cover"></img>
                     </div>
@@ -165,8 +169,8 @@
                             <p>Stay happy, stay peaceful, stay the way you are and stay healthy brother</p>
                         </div>
                     </div>
-                </div>
-                <div class="block">
+                </a>
+                <a href="message.html" class="block">
                     <div class="imgbx">
                         <img src="assets/users(4).png" class="cover"></img>
                     </div>
@@ -179,8 +183,8 @@
                             <p>Stay happy, stay peaceful, stay the way you are and stay healthy brother</p>
                         </div>
                     </div>
-                </div>
-                <div class="block">
+                </a>
+                <a href="message.html" class="block">
                     <div class="imgbx">
                         <img src="assets/users(4).png" class="cover"></img>
                     </div>
@@ -193,8 +197,8 @@
                             <p>Stay happy, stay peaceful, stay the way you are and stay healthy brother</p>
                         </div>
                     </div>
-                </div>
-                <div class="block">
+                </a>
+                <a href="message.html" class="block">
                     <div class="imgbx">
                         <img src="assets/users(4).png" class="cover"></img>
                     </div>
@@ -207,8 +211,8 @@
                             <p>Stay happy, stay peaceful, stay the way you are and stay healthy brother</p>
                         </div>
                     </div>
-                </div>
-                <div class="block">
+                </a>
+                <a href="message.html" class="block">
                     <div class="imgbx">
                         <img src="assets/users(4).png" class="cover"></img>
                     </div>
@@ -221,8 +225,8 @@
                             <p>Stay happy, stay peaceful, stay the way you are and stay healthy brother</p>
                         </div>
                     </div>
-                </div>
-                <div class="block">
+                </a>
+                <a href="message.html" class="block">
                     <div class="imgbx">
                         <img src="assets/users(4).png" class="cover"></img>
                     </div>
@@ -235,8 +239,8 @@
                             <p>Stay happy, stay peaceful, stay the way you are and stay healthy brother</p>
                         </div>
                     </div>
-                </div>
-                <div class="block">
+                </a>
+                <a href="message.html" class="block">
                     <div class="imgbx">
                         <img src="assets/users(4).png" class="cover"></img>
                     </div>
@@ -249,8 +253,8 @@
                             <p>Stay happy, stay peaceful, stay the way you are and stay healthy brother</p>
                         </div>
                     </div>
-                </div>
-                <div class="block">
+                </a>
+                <a href="message.html" class="block">
                     <div class="imgbx">
                         <img src="assets/users(4).png" class="cover"></img>
                     </div>
@@ -263,8 +267,8 @@
                             <p>Stay happy, stay peaceful, stay the way you are and stay healthy brother</p>
                         </div>
                     </div>
-                </div>
-                <div class="block">
+                </a>
+                <a href="message.html" class="block">
                     <div class="imgbx">
                         <img src="assets/users(4).png" class="cover"></img>
                     </div>
@@ -277,7 +281,7 @@
                             <p>Stay happy, stay peaceful, stay the way you are and stay healthy brother</p>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
         <div class="rightSide">
@@ -297,7 +301,7 @@
                 <div class="line"></div>
                 <div class="newMessage-box">
                     <div>
-                        <input type="text" placeholder="Type a message">
+                        <textarea type="text" placeholder="Type a message" rows=10></textarea>
                     </div>
                 </div>
                 <div class="line"></div>

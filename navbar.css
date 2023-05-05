@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 :root {
     --line-color: rgba(217, 217, 217, 1);
     --grey-text: rgba(107, 107, 107, 1);
@@ -21,7 +26,7 @@
     height: 7vh;
     display: flex;
     align-items: center;
-    font-family: "Ubuntu", sans serif;
+    font-family: "Ubuntu", sans-serif;
     box-shadow: 0px 10px 40px -12px rgba(0, 0, 0, 0.3);
     position: fixed;
     z-index: 999;
@@ -155,8 +160,13 @@ input[type=text]:focus {
     width: 33%;
 }
 
-/* Create Thread Button */
-/* ============================================================================================================== */
+.navbar .create-thread-btn {
+    padding: 0.5% 0.5%;
+    width: 10%;
+    margin-left: 1%;
+    margin-right: 4%;
+}
+
 .create-thread-btn {
     background-color: var(--blue);
     color: white;
@@ -171,16 +181,6 @@ input[type=text]:focus {
     background-color: var(--blue-hover);
     transition: all 0.25s;
 }
-
-.navbar .create-thread-btn {
-    /* background-color: var(--blue);
-    border-radius: 25%; */
-    padding: 0.5% 0.5%;
-    width: 10%;
-    margin-left: 1%;
-    margin-right: 4%;
-}
-
 
 
 /* User Menu */
@@ -199,11 +199,6 @@ input[type=text]:focus {
     opacity: 0;
     z-index: 998;
     transition: all 0.5s;
-}
-
-.user-menu-container a{
-    color: black;
-    text-decoration: none;
 }
 
 .triangle-container {
@@ -269,7 +264,7 @@ input[type=text]:focus {
     width: 15%;
     /* max-height: 32%; */
     top: 12%;
-    right: 20%;
+    right: 18.6%;
     background-color: white;
     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
@@ -354,7 +349,7 @@ input[type=text]:focus {
     /* height: 32%; */
     /* overflow-y: scroll; */
     top: 12%;
-    right: 22.8%;
+    right: 21.2%;
     background-color: white;
     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
@@ -659,6 +654,7 @@ input[type=text]:focus {
     font-size: 0.75em;
     padding: 1% 9%;
     box-shadow: none;
+    background-color: rgba(236, 236, 236, 1);
 }   
 
 .choose-post .search-bar img {

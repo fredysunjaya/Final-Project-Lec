@@ -64,8 +64,9 @@
     width: 100%;
     align-items: center;
     background-color: #DFFCBA;
-    height: 15vh;
     gap: 3%;
+    padding-top: 3%;
+    padding-bottom: 2%;
 }
 
 .search-bar-container b{

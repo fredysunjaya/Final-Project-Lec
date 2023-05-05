@@ -162,6 +162,20 @@ input[type=text]:focus {
     margin-right: 4%;
 }
 
+.create-thread-btn {
+    background-color: var(--blue);
+    color: white;
+    padding: 5% 5%;
+    border-radius: 100px;
+    font-family: "Ubuntu", sans sans-serif;
+    text-align: center;
+    cursor: pointer;
+}
+
+.create-thread-btn:hover {
+    background-color: var(--blue-hover);
+    transition: all 0.25s;
+}
 
 /* User Menu */
 /* ============================================================================================================== */

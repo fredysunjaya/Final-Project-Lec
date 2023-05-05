@@ -20,6 +20,25 @@ body{
 
 }
 
+p1{
+    font-weight: 200px;
+    font-size: 20px;
+    /* padding-top: 1%; */
+    margin-left: 3%;
+    margin-bottom: 3%;
+}
+
+p2{
+    font-weight: 200px;
+    font-size: 20px;
+    margin-left: 0%;
+}
+
+p{
+    font-size: 11px;
+    margin-top: 3%;
+    margin-right: 10%;
+}
 
 
 .container{
@@ -319,25 +338,6 @@ body{
     gap: 20px;
 }
 
-p1{
-    font-weight: 200px;
-    font-size: 20px;
-    /* padding-top: 1%; */
-    margin-left: 3%;
-    margin-bottom: 3%;
-}
-
-p2{
-    font-weight: 200px;
-    font-size: 20px;
-    margin-left: 0%;
-}
-
-p{
-    font-size: 11px;
-    margin-top: 3%;
-    margin-right: 10%;
-}
 
 
 
